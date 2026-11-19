@@ -1,0 +1,61 @@
+{
+  "corpus_version": "2026-11-19.1",
+  "notice": "Unofficial Elestrals fan content. Card names and tournament facts only; no card text or card art is stored.",
+  "sources": [
+    {
+      "id": "S1-worlds-2026",
+      "title": "2026 Elestrals World Championship results (summary in my own words)",
+      "kind": "text",
+      "file": "text/S1-worlds-2026.md",
+      "structured": "structured/S1-worlds-2026.json",
+      "original_url": "https://www.elestrals.com/news/2026-world-championship-results-your-bride-is-here",
+      "owner": "Elestrals LLC",
+      "permission": "Elestrals Fan Content Policy plus direct permission from the Elestrals team (written copy pending)",
+      "status": "externally_verified",
+      "version": 1,
+      "published": "2026-03-27",
+      "checked": "2026-11-19"
+    },
+    {
+      "id": "S2-premier-2026-10-24",
+      "title": "October 24, 2026 Premier Webcam Tournament: top 8 and winning decklist",
+      "kind": "results",
+      "structured": "structured/S2-premier-2026-10-24.json",
+      "original_url": "https://www.topelestrals.com/tournaments/october-24-2026---premier-webcam-tournament-(hosted-by-elestrals)-10-24-2026",
+      "owner": "TopElestrals",
+      "permission": "Direct permission from the TopElestrals site owner (written copy pending)",
+      "status": "externally_verified",
+      "version": 1,
+      "published": "2026-10-24",
+      "checked": "2026-11-19"
+    },
+    {
+      "id": "S3-note-01",
+      "title": "Meta overview after the Columbus Open (Peter's notes)",
+      "kind": "text",
+      "file": "text/S3-note-01.md",
+      "structured": "structured/S3-note-01.json",
+      "original_url": "https://github.com/pb392/is373-individual-record/blob/main/docs/notes/S3-note-01-meta-overview.md",
+      "owner": "Peter Balasis",
+      "permission": "Own work",
+      "status": "author_knowledge",
+      "version": 1,
+      "published": "2026-11-13",
+      "checked": "2026-11-13"
+    },
+    {
+      "id": "S3-note-02",
+      "title": "Which bosses each archetype plays (Peter's notes)",
+      "kind": "text",
+      "file": "text/S3-note-02.md",
+      "structured": "structured/S3-note-02.json",
+      "original_url": "https://github.com/pb392/is373-individual-record/blob/main/docs/notes/S3-note-02-archetype-bosses.md",
+      "owner": "Peter Balasis",
+      "permission": "Own work",
+      "status": "author_knowledge",
+      "version": 1,
+      "published": "2026-11-13",
+      "checked": "2026-11-13"
+    }
+  ]
+}

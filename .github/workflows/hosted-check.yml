@@ -1,0 +1,32 @@
+name: Hosted check
+
+# Runs the evaluation questions against the LIVE app and commits the actual
+# responses, so the record can link to dated, observed hosted results.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check both sites respond over HTTPS
+        run: |
+          curl -fsS https://xenoshin.com/ | grep -q "I build and test the systems behind games"
+          curl -fsS https://rag.xenoshin.com/health
+          test "$(curl -s -o /dev/null -w '%{http_code}' -X POST https://rag.xenoshin.com/admin/import)" = 401
+      - name: Run evaluation questions
+        run: python rag/eval/run_eval.py https://rag.xenoshin.com rag/eval/hosted/$(date -u +%Y-%m-%d)
+      - name: Save results to the repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rag/eval/hosted
+          git commit -m "Hosted evaluation results $(date -u +%FT%TZ) [skip ci]" || echo "nothing to commit"
+          git push

@@ -1,0 +1,79 @@
+{
+  "source_id": "S2-premier-2026-10-24",
+  "privacy_note": "Player handles are left out on purpose; placements are stored by position only.",
+  "tournaments": [
+    {
+      "id": "T-PREMIER-2026-10-24",
+      "name": "October 24, 2026 Premier Webcam Tournament (hosted by Elestrals)",
+      "aliases": ["october 24", "oct 24", "10/24", "october premier", "premier on october 24"],
+      "date_start": "2026-10-24",
+      "date_end": "2026-10-24",
+      "participants": 66
+    }
+  ],
+  "placements": [
+    {"id": "p1", "tournament": "T-PREMIER-2026-10-24", "placement": "1st", "archetype": null,
+     "elements": {"Fire": 16, "Wind": 3, "Water": 1}, "deck": "D-PREMIER-2026-10-24-1",
+     "featured_cards": ["Hestia's Hearth", "Eruption - Hephaestus' Jealousy", "Rummacoal", "Ashrabbit - Champion of Hestia", "Majursa - Champion of Hestia", "Kindleo", "Hestia", "Hestia's Hearth - Eternal Flame", "Urscout - Champion of Hestia", "Warmite - Champion of Hestia"]},
+    {"id": "p2", "tournament": "T-PREMIER-2026-10-24", "placement": "2nd", "archetype": null,
+     "elements": {"Lunar": 17, "Frost": 2, "Water": 1},
+     "featured_cards": ["Lunar Phase - Lunar Eclipse", "Temple of the Moon", "Werepup", "Doppelgator", "Gloombatt", "Auraboros", "Gnawbie", "Specteris - Champion of Athena", "Vermilord", "Rise from the Shadows"]},
+    {"id": "p3", "tournament": "T-PREMIER-2026-10-24", "placement": "Top 4", "archetype": null,
+     "elements": {"Fire": 12, "Frost": 8},
+     "featured_cards": ["Volcanic Forge", "Hades", "Frosmite - Champion of Hades", "Trifernal - Champion of Hades", "Blazerus - Champion of Hades", "Eruption - Hephaestus' Jealousy", "Up in Flames", "Ashrabbit - Champion of Hestia", "Necruff - Champion of Hades", "Kryoling - Champion of Hades"]},
+    {"id": "p4", "tournament": "T-PREMIER-2026-10-24", "placement": "Top 4", "archetype": null,
+     "elements": {"Frost": 14, "Earth": 4, "Fire": 2},
+     "featured_cards": ["Polzer - Champion of Hades", "Kryoling", "Frosmite - Champion of Hades", "Kryoling - Champion of Hades", "Eternal Winter", "Hades", "Arctaurus - Champion of Hades", "Kryovyrn - Champion of Hades", "House of Hades", "Necromancy of Hades"]},
+    {"id": "p5", "tournament": "T-PREMIER-2026-10-24", "placement": "Top 8", "archetype": null,
+     "elements": {"Earth": 17, "Water": 1, "Frost": 1, "Lunar": 1},
+     "featured_cards": ["Midas' Touch", "Duggabyss", "Demeter", "Clovie - Champion of Demeter", "Foloi Forest", "Equilynx - Champion of Demeter", "Dionysus", "Mudlet - Champion of Demeter", "Demeter's Harvest", "Duggy"]},
+    {"id": "p6", "tournament": "T-PREMIER-2026-10-24", "placement": "Top 8", "archetype": null,
+     "elements": {"Frost": 13, "Earth": 5, "Fire": 2},
+     "featured_cards": ["Eternal Winter", "Chillalotl - Champion of Khione", "Blizzard - Whiteout", "Kryoscorch - Champion of Hades", "Kryoling - Champion of Hades", "Khione", "Catarant - Champion of Khione", "Hades", "Kryovyrn - Champion of Hades", "Mountains of Boreas"]},
+    {"id": "p7", "tournament": "T-PREMIER-2026-10-24", "placement": "Top 8", "archetype": null,
+     "elements": {"Frost": 11, "Earth": 4, "Fire": 3, "Water": 2},
+     "featured_cards": ["Eternal Winter", "House of Hades", "Frosmite - Champion of Hades", "Kryoling", "Cryoblast", "Polzer - Champion of Hades", "Chillalotl - Champion of Khione", "Kryovyrn - Champion of Hades", "Hades", "Aurora Borealis"]},
+    {"id": "p8", "tournament": "T-PREMIER-2026-10-24", "placement": "Top 8", "archetype": null,
+     "elements": {"Frost": 9, "Fire": 7, "Earth": 4},
+     "featured_cards": ["Polzer - Champion of Hades", "Khione", "Kryoling - Champion of Hades", "Eternal Winter", "Cryoblast", "Hades", "Necromancy of Hades", "Chillalotl - Champion of Khione", "Aurora Borealis", "Up in Flames"]}
+  ],
+  "decks": [
+    {
+      "id": "D-PREMIER-2026-10-24-1",
+      "tournament": "T-PREMIER-2026-10-24",
+      "placement": "1st",
+      "original_url": "https://www.topelestrals.com/decks/6ade1a7b46ec2ba71111a738",
+      "complete": true,
+      "cards": [
+        {"section": "main", "name": "Hestia's Hearth", "set": "FST-077", "qty": 3},
+        {"section": "main", "name": "Eruption - Hephaestus' Jealousy", "set": "SST-089", "qty": 1},
+        {"section": "main", "name": "Kitemite - Champion of Hestia", "set": "SSH-042", "qty": 3},
+        {"section": "main", "name": "Rummacoal", "set": "DB1-043", "qty": 2},
+        {"section": "main", "name": "Ashrabbit - Champion of Hestia", "set": "SST-019", "qty": 3},
+        {"section": "main", "name": "Majursa - Champion of Hestia", "set": "FST-021", "qty": 1},
+        {"section": "main", "name": "Parachne - Champion of Hestia", "set": "SSH-043", "qty": 2},
+        {"section": "main", "name": "Kindleo", "set": "SD02-07", "qty": 1},
+        {"section": "main", "name": "Hestia", "set": "FST-075", "qty": 3},
+        {"section": "main", "name": "Poison Tipped Arrow", "set": "DB1-091", "qty": 3},
+        {"section": "main", "name": "Hestia's Hearth - Eternal Flame", "set": "SSH-081", "qty": 1},
+        {"section": "main", "name": "Gorgon's Gaze", "set": "DB1-092", "qty": 3},
+        {"section": "main", "name": "Urscout - Champion of Hestia", "set": "XX/99", "qty": 2},
+        {"section": "main", "name": "Warmite - Champion of Hestia", "set": "FST-022", "qty": 3},
+        {"section": "main", "name": "Volcanic Forge", "set": "SD02-17", "qty": 2},
+        {"section": "main", "name": "Resting on Your Laurels", "set": "SD07-15", "qty": 2},
+        {"section": "main", "name": "Volcaries", "set": "SS1-061", "qty": 2},
+        {"section": "main", "name": "Ursmog - Champion of Hestia", "set": "SST-018", "qty": 3},
+        {"section": "spirit", "name": "Leviaphin", "set": "SS1-040", "qty": 1},
+        {"section": "spirit", "name": "Lycarus", "set": "SS1-012", "qty": 3},
+        {"section": "spirit", "name": "Vipyro", "set": "BS1-122", "qty": 16},
+        {"section": "side", "name": "Flurrmine", "set": "DB1-008", "qty": 2},
+        {"section": "side", "name": "Necruff", "set": "BS1-020", "qty": 2},
+        {"section": "side", "name": "Volcaries", "set": "SS1-061", "qty": 1},
+        {"section": "side", "name": "Volcanic Forge", "set": "SD02-17", "qty": 1},
+        {"section": "side", "name": "Patroclus' Dice", "set": "SST-105", "qty": 3},
+        {"section": "side", "name": "Shield of Achilles", "set": "SD07-22", "qty": 3},
+        {"section": "side", "name": "Cryoblast", "set": "DB1-078", "qty": 3}
+      ]
+    }
+  ]
+}

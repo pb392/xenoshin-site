@@ -1,0 +1,52 @@
+# Production services on the droplet. Routing goes through the existing
+# Traefik proxy (/opt/xenoshin-hosting) on the shared "hosting-web" network.
+name: xenoshin-site
+
+services:
+  portfolio:
+    build: ./portfolio
+    image: xenoshin-portfolio:local
+    restart: unless-stopped
+    mem_limit: 64m
+    networks: [hosting]
+    labels:
+      traefik.enable: "true"
+      traefik.docker.network: hosting-web
+      traefik.http.routers.portfolio.rule: Host(`xenoshin.com`) || Host(`www.xenoshin.com`)
+      traefik.http.routers.portfolio.entrypoints: websecure
+      traefik.http.routers.portfolio.service: portfolio
+      traefik.http.services.portfolio.loadbalancer.server.port: "8080"
+
+  rag:
+    build:
+      context: ./rag
+      args:
+        GIT_COMMIT: ${GIT_COMMIT:-unknown}
+    image: xenoshin-rag:local
+    restart: unless-stopped
+    mem_limit: 300m
+    env_file: .env
+    volumes:
+      - rag-data:/data
+    networks: [hosting]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=5)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    labels:
+      traefik.enable: "true"
+      traefik.docker.network: hosting-web
+      traefik.http.routers.rag.rule: Host(`rag.xenoshin.com`)
+      traefik.http.routers.rag.entrypoints: websecure
+      traefik.http.routers.rag.service: rag
+      traefik.http.services.rag.loadbalancer.server.port: "8000"
+
+volumes:
+  rag-data:
+
+networks:
+  hosting:
+    external: true
+    name: hosting-web

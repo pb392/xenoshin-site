@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tested release pipeline · Peter Balasis</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site">
+    <div class="wrap">
+      <nav aria-label="Main">
+        <a class="name" href="/">Peter Balasis</a>
+        <a href="/">Home</a>
+        <a href="/#projects" aria-current="page">Projects</a>
+        <a href="/about.html">About</a>
+        <a href="https://github.com/pb392">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="hero">
+      <span class="badge done">Completed · Oct 2026</span>
+      <h1>Tested release pipeline</h1>
+      <p class="lead">A containerized web app that could only reach users after its tests passed, with a separate QA environment updated first.</p>
+      <a class="cta" href="https://github.com/pb392/is373_ci_cd">Code &amp; evidence</a>
+    </section>
+
+    <h2>What I built</h2>
+    <ul>
+      <li>GitHub Actions ran unit, integration and real-browser tests on two processor types before building and publishing each Docker image.</li>
+      <li>Pushing to the QA branch updated a QA site automatically; merging into main updated production. Production stayed unchanged until that merge.</li>
+      <li>The workflow then checked over HTTPS that the expected commit was actually running.</li>
+      <li>The server only allows SSH-key logins for a non-root account; root and password logins are refused.</li>
+    </ul>
+
+    <h2>Why it matters for game teams</h2>
+    <p>Game studios ship builds constantly. The same idea, where nothing reaches players until the checks pass, is the core of build and release engineering.</p>
+
+    <h2>Evidence</h2>
+    <ul class="evidence">
+      <li><a href="https://github.com/pb392/is373_ci_cd#test-evidence">Recorded test runs, deployed commits and screenshots</a> (observed October 15, 2026)</li>
+      <li><a href="https://github.com/pb392/is373_ci_cd/actions">GitHub Actions history</a></li>
+    </ul>
+
+    <div class="note"><strong>Note:</strong> the original demo sites at xenoshin.com and qa.xenoshin.com were retired in November 2026, after the project was graded, to make room on the server for this portfolio and the Elestrals app. The recorded evidence above is unchanged. The pipeline idea lives on: this site's own tests must pass before the server updates.</div>
+  </main>
+
+  <footer class="site">
+    <div class="wrap"><p>Peter Balasis · <a href="https://github.com/pb392">github.com/pb392</a></p></div>
+  </footer>
+</body>
+</html>

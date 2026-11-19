@@ -1,0 +1,23 @@
+{
+  "source_id": "S1-worlds-2026",
+  "tournaments": [
+    {
+      "id": "T-WORLDS-2026",
+      "name": "2026 Elestrals World Championship",
+      "aliases": ["worlds", "world championship", "world championships", "world champion"],
+      "date_start": "2026-03-27",
+      "date_end": "2026-03-27",
+      "date_note": "Event date not stated in the source; date shown is the results article date (2026-03-27)."
+    }
+  ],
+  "placements": [
+    {
+      "id": "worlds-1st",
+      "tournament": "T-WORLDS-2026",
+      "placement": "1st",
+      "archetype": "Celestleo",
+      "note": "Won by Mike Thomas (Trishula) with a Celestleo decklist."
+    }
+  ],
+  "decks": []
+}

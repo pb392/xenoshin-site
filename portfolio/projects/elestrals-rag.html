@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elestrals Meta Assistant · Peter Balasis</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site">
+    <div class="wrap">
+      <nav aria-label="Main">
+        <a class="name" href="/">Peter Balasis</a>
+        <a href="/">Home</a>
+        <a href="/#projects" aria-current="page">Projects</a>
+        <a href="/about.html">About</a>
+        <a href="https://github.com/pb392">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="hero">
+      <span class="badge live">Live · case study in progress</span>
+      <h1>Elestrals Meta Assistant</h1>
+      <p class="lead">Ask a question about the competitive Elestrals card game and get a short answer that links to the exact tournament result, decklist or note it came from.</p>
+      <a class="cta" href="https://rag.xenoshin.com">Open the app</a>
+      <a class="cta secondary" href="https://github.com/pb392/xenoshin-site/tree/main/rag">Read the code</a>
+    </section>
+
+    <div class="note"><strong>Status (Build stage, November 2026):</strong> import, search and cited answers are working and hosted. The full case study, measured results and accessibility checks come at the release stage in December. This page says only what has been built so far.</div>
+
+    <h2>The problem</h2>
+    <p>Players preparing for a tournament want to know what's winning, but the information is scattered across official articles, community results sites and people's own notes. A general chatbot may confidently invent decklists. This app answers only from sources it has imported, and says so when it can't.</p>
+
+    <h2>How it works</h2>
+    <ol>
+      <li><strong>Import:</strong> four permitted sources are loaded with stable IDs, versions and a verification status. Running the import again changes nothing.</li>
+      <li><strong>Represent:</strong> text is split into small passages (with keyword and meaning-based search indexes). Tournament results, decklists and which archetypes play which boss go into database tables, because exact counts and relationships are a poor fit for similarity search.</li>
+      <li><strong>Retrieve:</strong> each question gets keyword and vector search results, merged together, plus exact database lookups.</li>
+      <li><strong>Answer:</strong> Google Gemini writes a short answer using only that evidence. The app then checks every citation, removes any that don't match, and withholds answers with no valid citation.</li>
+    </ol>
+
+    <h2>Decisions I made</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Decision</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Database tables + vector search, not vectors alone</td><td>Questions like "how many copies of a card" or "which decks run this boss" need exact answers.</td></tr>
+          <tr><td>SQLite, not PostgreSQL or Neo4j</td><td>My server has 1 GB of RAM. SQLite is a single file with no extra service.</td></tr>
+          <tr><td>Hosted embeddings (Gemini)</td><td>A local embedding model could use most of that 1 GB by itself.</td></tr>
+          <tr><td>Every fact marked "externally verified" or "author knowledge"</td><td>A classmate's review pointed out that my own notes agreeing with themselves isn't confirmation.</td></tr>
+          <tr><td>No player names stored</td><td>Placements are stored by position only; the app doesn't need personal data.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Evidence</h2>
+    <ul class="evidence">
+      <li><a href="https://rag.xenoshin.com">Live app</a>: ask a question, then open "How this answer was found" to see the full trace.</li>
+      <li><a href="https://rag.xenoshin.com/sources">Source list</a> and <a href="https://rag.xenoshin.com/import-record">import record</a></li>
+      <li><a href="https://github.com/pb392/xenoshin-site/actions">Automated tests (GitHub Actions)</a>, which must pass before the server updates</li>
+      <li><a href="https://github.com/pb392/is373-individual-record#2-individual-rag-app--technical-research">Research and planning record</a></li>
+    </ul>
+
+    <h2>Limits right now</h2>
+    <ul>
+      <li>The data is small: one official Worlds summary, one Premier's top 8 with the winning decklist, and two sets of my own notes.</li>
+      <li>The Columbus Open results come only from my notes until TopElestrals posts them.</li>
+      <li>A citation shows where an answer came from; it doesn't guarantee every sentence is right.</li>
+    </ul>
+
+    <p class="note">Unofficial Elestrals fan content; not endorsed or approved by Elestrals. Portions of the materials used are the property of Elestrals LLC. See the <a href="https://www.elestrals.com/fan-content-policy">Elestrals Fan Content Policy</a>.</p>
+  </main>
+
+  <footer class="site">
+    <div class="wrap"><p>Peter Balasis · <a href="https://github.com/pb392">github.com/pb392</a></p></div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "source_id": "S3-note-02",
+  "tournaments": [],
+  "placements": [],
+  "decks": [],
+  "archetype_bosses": [
+    {"archetype": "Hades Sloth", "boss": "Neandersloth CoKhione"},
+    {"archetype": "Hades Trifernal", "boss": "Trifernal CoHades"},
+    {"archetype": "Hades Trifernal", "boss": "Sulfury"},
+    {"archetype": "Apollo Celestleo", "boss": "Celestleo"},
+    {"archetype": "Athena Dimenshen", "boss": "Dimenshen CoAthena"},
+    {"archetype": "Fish", "boss": "Apheros CoAphrodite"},
+    {"archetype": "Fish", "boss": "Magneros CoAphrodite"},
+    {"archetype": "Fish", "boss": "Lochagon"},
+    {"archetype": "Sulfury Fire Discard", "boss": "Sulfury"},
+    {"archetype": "Dio Duggy", "boss": "Neandersloth CoKhione"},
+    {"archetype": "Dio Duggy", "boss": "Duggabyss"},
+    {"archetype": "Dio Duggy", "boss": "Centaurbor CoDionysus"}
+  ]
+}

@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install -r rag/requirements.txt pytest httpx
+      - name: RAG tests (core + web)
+        run: python -m pytest -v rag/tests
+      - name: Portfolio link and structure checks
+        run: python scripts/check_site.py
+      - name: Shell syntax
+        run: sh -n deploy/setup.sh && sh -n deploy/auto-deploy.sh
+      - name: Build images
+        run: |
+          docker build -t xenoshin-rag:ci --build-arg GIT_COMMIT=${{ github.sha }} rag
+          docker build -t xenoshin-portfolio:ci portfolio
+      - name: Container smoke test (no API key, keyword-only mode)
+        run: |
+          docker run -d --name rag -p 8000:8000 xenoshin-rag:ci
+          for i in $(seq 1 30); do curl -fs http://127.0.0.1:8000/health && break; sleep 2; done
+          curl -fs http://127.0.0.1:8000/health | python -c "import json,sys; h=json.load(sys.stdin); assert h['chunks']>0 and h['sources']==4, h; print('health ok', h)"
+          test "$(curl -s -o /dev/null -w '%{http_code}' -X POST http://127.0.0.1:8000/admin/import)" = 401
+          docker run -d --name web -p 8080:8080 xenoshin-portfolio:ci
+          sleep 2
+          curl -fs http://127.0.0.1:8080/ | grep -q "I build and test the systems behind games"
+          echo "smoke ok"
+
+  release:
+    # The server deploys only this branch, so it moves only after every check passed.
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Advance release branch
+        run: git push origin HEAD:refs/heads/release --force
