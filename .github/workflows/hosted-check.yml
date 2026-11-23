@@ -18,6 +18,16 @@ jobs:
           python-version: "3.12"
       - name: Pick the results folder for this run
         run: echo "OUT=rag/eval/hosted/$(date -u +%Y-%m-%dT%H%MZ)" >> "$GITHUB_ENV"
+      - name: Wait until the server runs the current release (avoids testing mid-deploy)
+        run: |
+          git fetch -q origin release
+          want=$(git rev-parse origin/release)
+          for i in $(seq 1 40); do
+            have=$(curl -fsS https://rag.xenoshin.com/health | python -c "import json,sys; print(json.load(sys.stdin)['commit'])" || true)
+            [ "$have" = "$want" ] && { echo "server runs $want"; sleep 20; exit 0; }
+            echo "server runs ${have:-?}, waiting for $want"; sleep 15
+          done
+          echo "server never reached $want"; exit 1
       - name: Check both sites respond over HTTPS
         run: |
           curl -fsS https://xenoshin.com/ | grep -q "I build and test the systems behind games"

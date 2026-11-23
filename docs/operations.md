@@ -27,6 +27,8 @@ Check: `https://rag.xenoshin.com/health` shows `"sources": 7` and `https://rag.x
 
 Push to `main`. CI runs the tests, the portfolio checks, the container smoke test, the restart/backup drill and the keyboard and phone-width checks. Only if all pass does it move `release`. Within 2 minutes the server pulls `release` and rebuilds. Each container start runs the import; unchanged sources are not re-embedded.
 
+Each update restarts the app, so for a few seconds requests can get HTTP 502 (one container, no rolling restart). The hosted check waits until `/health` shows the current release before it starts.
+
 To see what the server is running: the footer of any RAG page shows the commit, or run `git -C ~/xenoshin-site log --oneline -1`.
 
 ## 3. Back up and restore the database
