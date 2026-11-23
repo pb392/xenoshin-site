@@ -1,0 +1,197 @@
+{
+  "source_id": "S4-worlds-2026-decklist",
+  "privacy_note": "Stores card names and counts only. The decklist page is titled with the champion's player name, which is already public in S1.",
+  "tournaments": [],
+  "placements": [],
+  "decks": [
+    {
+      "id": "D-WORLDS-2026-1",
+      "tournament": "T-WORLDS-2026",
+      "placement": "1st",
+      "original_url": "https://play.elestrals.com/decks/cmn055iml00aj01ldvzakl14q",
+      "complete": true,
+      "cards": [
+        {
+          "section": "main",
+          "name": "Nebuleo",
+          "set": null,
+          "qty": 3
+        },
+        {
+          "section": "main",
+          "name": "Celestleo",
+          "set": null,
+          "qty": 1
+        },
+        {
+          "section": "main",
+          "name": "Glimbatt - Champion of Apollo",
+          "set": null,
+          "qty": 2
+        },
+        {
+          "section": "main",
+          "name": "Novacore - Champion of Apollo",
+          "set": null,
+          "qty": 3
+        },
+        {
+          "section": "main",
+          "name": "Lumaroo",
+          "set": null,
+          "qty": 3
+        },
+        {
+          "section": "main",
+          "name": "Exaltus",
+          "set": null,
+          "qty": 3
+        },
+        {
+          "section": "main",
+          "name": "Plucky",
+          "set": null,
+          "qty": 1
+        },
+        {
+          "section": "main",
+          "name": "Earthquake",
+          "set": null,
+          "qty": 1
+        },
+        {
+          "section": "main",
+          "name": "Apollo",
+          "set": null,
+          "qty": 3
+        },
+        {
+          "section": "main",
+          "name": "Lyre of Apollo",
+          "set": null,
+          "qty": 1
+        },
+        {
+          "section": "main",
+          "name": "Temple of the Sun",
+          "set": null,
+          "qty": 2
+        },
+        {
+          "section": "main",
+          "name": "First Light",
+          "set": null,
+          "qty": 2
+        },
+        {
+          "section": "main",
+          "name": "Solar Burst",
+          "set": null,
+          "qty": 1
+        },
+        {
+          "section": "main",
+          "name": "Guardian of Light",
+          "set": null,
+          "qty": 3
+        },
+        {
+          "section": "main",
+          "name": "Necklace of Harmonia",
+          "set": null,
+          "qty": 1
+        },
+        {
+          "section": "main",
+          "name": "Altar of Stars",
+          "set": null,
+          "qty": 2
+        },
+        {
+          "section": "main",
+          "name": "Argo",
+          "set": null,
+          "qty": 3
+        },
+        {
+          "section": "main",
+          "name": "Gorgon's Gaze",
+          "set": null,
+          "qty": 3
+        },
+        {
+          "section": "main",
+          "name": "Shield of Achilles",
+          "set": null,
+          "qty": 2
+        },
+        {
+          "section": "spirit",
+          "name": "Teratlas",
+          "set": null,
+          "qty": 2
+        },
+        {
+          "section": "spirit",
+          "name": "Leviaphin",
+          "set": null,
+          "qty": 3
+        },
+        {
+          "section": "spirit",
+          "name": "Luminape",
+          "set": null,
+          "qty": 15
+        },
+        {
+          "section": "side",
+          "name": "Galaxea",
+          "set": null,
+          "qty": 3
+        },
+        {
+          "section": "side",
+          "name": "Tsunami",
+          "set": null,
+          "qty": 2
+        },
+        {
+          "section": "side",
+          "name": "Resting on Your Laurels",
+          "set": null,
+          "qty": 1
+        },
+        {
+          "section": "side",
+          "name": "Pandora's Box",
+          "set": null,
+          "qty": 3
+        },
+        {
+          "section": "side",
+          "name": "Poison Tipped Arrow",
+          "set": null,
+          "qty": 3
+        },
+        {
+          "section": "side",
+          "name": "Poisoned Nectar",
+          "set": null,
+          "qty": 1
+        },
+        {
+          "section": "side",
+          "name": "Shield of Achilles",
+          "set": null,
+          "qty": 1
+        },
+        {
+          "section": "side",
+          "name": "Spoiled Fruit",
+          "set": null,
+          "qty": 1
+        }
+      ]
+    }
+  ]
+}

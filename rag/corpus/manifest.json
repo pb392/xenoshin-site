@@ -1,5 +1,5 @@
 {
-  "corpus_version": "2026-11-19.1",
+  "corpus_version": "2026-11-23.1",
   "notice": "Unofficial Elestrals fan content. Card names and tournament facts only; no card text or card art is stored.",
   "sources": [
     {
@@ -10,11 +10,24 @@
       "structured": "structured/S1-worlds-2026.json",
       "original_url": "https://www.elestrals.com/news/2026-world-championship-results-your-bride-is-here",
       "owner": "Elestrals LLC",
-      "permission": "Elestrals Fan Content Policy plus direct permission from the Elestrals team (written copy pending)",
+      "permission": "Elestrals Fan Content Policy plus written permission from an Elestrals team member, 2026-11-23 (docs/permissions/elestrals-2026-11-23.png in the record repo)",
+      "status": "externally_verified",
+      "version": 2,
+      "published": "2026-03-27",
+      "checked": "2026-11-23"
+    },
+    {
+      "id": "S4-worlds-2026-decklist",
+      "title": "2026 World Championship winning decklist (card names and counts)",
+      "kind": "results",
+      "structured": "structured/S4-worlds-2026-decklist.json",
+      "original_url": "https://play.elestrals.com/decks/cmn055iml00aj01ldvzakl14q",
+      "owner": "Elestrals LLC",
+      "permission": "Elestrals Fan Content Policy plus written permission from an Elestrals team member, 2026-11-23 (docs/permissions/elestrals-2026-11-23.png in the record repo)",
       "status": "externally_verified",
       "version": 1,
-      "published": "2026-03-27",
-      "checked": "2026-11-19"
+      "published": "2026-03-21",
+      "checked": "2026-11-23"
     },
     {
       "id": "S2-premier-2026-10-24",
@@ -23,11 +36,25 @@
       "structured": "structured/S2-premier-2026-10-24.json",
       "original_url": "https://www.topelestrals.com/tournaments/october-24-2026---premier-webcam-tournament-(hosted-by-elestrals)-10-24-2026",
       "owner": "TopElestrals",
-      "permission": "Direct permission from the TopElestrals site owner (written copy pending)",
+      "permission": "Written permission from the TopElestrals developer, 2026-11-23, for a college class or similar (docs/permissions/topelestrals-2026-11-23.png in the record repo)",
       "status": "externally_verified",
       "version": 1,
       "published": "2026-10-24",
-      "checked": "2026-11-19"
+      "checked": "2026-11-23"
+    },
+    {
+      "id": "S5-premier-2026-11-21",
+      "title": "November 21, 2026 Premier Webcam Tournament: top 8 and winning decklist",
+      "kind": "results",
+      "structured": "structured/S5-premier-2026-11-21.json",
+      "original_url": "https://www.topelestrals.com/tournaments/november-21-2026-premier-webcam-tournament-hosted-by-elestrals-11-21-2026",
+      "owner": "TopElestrals",
+      "permission": "Written permission from the TopElestrals developer, 2026-11-23, for a college class or similar (docs/permissions/topelestrals-2026-11-23.png in the record repo)",
+      "status": "externally_verified",
+      "version": 1,
+      "published": "2026-11-21",
+      "checked": "2026-11-23",
+      "notes": "Placements, elements and the decklist are from TopElestrals. Archetype names are Peter's (author knowledge) and say so in each row's note."
     },
     {
       "id": "S3-note-01",
@@ -56,6 +83,20 @@
       "version": 1,
       "published": "2026-11-13",
       "checked": "2026-11-13"
+    },
+    {
+      "id": "S3-note-03",
+      "title": "Archetype names and Hestia Spiders decklists (Peter's notes)",
+      "kind": "text",
+      "file": "text/S3-note-03.md",
+      "structured": "structured/S3-note-03.json",
+      "original_url": "https://github.com/pb392/is373-individual-record/blob/main/docs/notes/S3-note-03-archetypes-and-hestia-spiders.md",
+      "owner": "Peter Balasis",
+      "permission": "Own work",
+      "status": "author_knowledge",
+      "version": 1,
+      "published": "2026-11-23",
+      "checked": "2026-11-23"
     }
   ]
 }

@@ -1,0 +1,11 @@
+{
+  "source_id": "S3-note-03",
+  "tournaments": [],
+  "placements": [],
+  "decks": [],
+  "archetype_bosses": [
+    {"archetype": "Hades Trifernal/Sloth", "boss": "Trifernal CoHades"},
+    {"archetype": "Hades Trifernal/Sloth", "boss": "Neandersloth CoKhione"},
+    {"archetype": "Dem Dio Hades", "boss": "Neandersloth CoKhione"}
+  ]
+}

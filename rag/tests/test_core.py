@@ -72,9 +72,9 @@ def test_missing_decklist_is_unknown_not_zero(loaded):
 
 def test_latest_event_and_coverage_line(loaded):
     conn, _, _ = loaded
-    assert "Columbus Open" in coverage_line(conn)
+    assert "November 21, 2026 Premier" in coverage_line(conn)
     facts = structured_facts(conn, "Who won the last tournament?")
-    assert facts[0].text.startswith("1st at Columbus Open") and facts[0].status == "author_knowledge"
+    assert facts[0].text.startswith("1st at November 21, 2026 Premier") and facts[0].status == "externally_verified"
 
 
 def test_newer_imported_event_becomes_the_latest(conn, corpus):
@@ -83,8 +83,8 @@ def test_newer_imported_event_becomes_the_latest(conn, corpus):
         "owner": "test", "permission": "test fixture", "status": "externally_verified", "version": 1,
     }, {
         "source_id": "S2-test-newer",
-        "tournaments": [{"id": "T-TEST-2026-11-21", "name": "Test Premier", "aliases": ["test premier"], "date_start": "2026-11-21", "date_end": "2026-11-21"}],
-        "placements": [{"id": "t1", "tournament": "T-TEST-2026-11-21", "placement": "1st", "archetype": "Apollo Celestleo"}],
+        "tournaments": [{"id": "T-TEST-2026-12-05", "name": "Test Premier", "aliases": ["test premier"], "date_start": "2026-12-05", "date_end": "2026-12-05"}],
+        "placements": [{"id": "t1", "tournament": "T-TEST-2026-12-05", "placement": "1st", "archetype": "Apollo Celestleo"}],
         "decks": [],
     })
     run_import(conn, corpus, CountingEmbedder())
@@ -152,3 +152,14 @@ def test_retrieval_keyword_baseline_finds_the_note(loaded):
     result = retrieve(conn, "Columbus Open winner", None)
     assert result.mode == "keyword-only"
     assert any(e.id.startswith("S3-note-01#") for e in result.evidence if e.kind == "chunk")
+
+
+def test_nov21_premier_and_worlds_decklist(loaded):
+    conn, _, _ = loaded
+    from app.facts import structured_facts
+    win = " ".join(f.text for f in structured_facts(conn, "Who won the November 21 premier?"))
+    assert "Hermes Toolbox (Wind 13" in win
+    worlds = " ".join(f.text for f in structured_facts(conn, "How many copies of Argo did the Worlds winner run?"))
+    assert "3 in the main deck" in worlds and "2026-03-21" in worlds
+    nov = " ".join(f.text for f in structured_facts(conn, "How many Gorgon's Gaze in the November 21 winning deck?"))
+    assert "3 in the main deck" in nov

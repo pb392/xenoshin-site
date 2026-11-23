@@ -162,7 +162,11 @@ def boss_facts(conn: sqlite3.Connection, q: str) -> list[Evidence]:
 
 
 def _placement_text(p: sqlite3.Row, t: sqlite3.Row) -> str:
-    what = p["archetype"] or ", ".join(f"{k} {v}" for k, v in json.loads(p["elements"] or "{}").items()) + " deck"
+    elements = ", ".join(f"{k} {v}" for k, v in json.loads(p["elements"] or "{}").items())
+    if p["archetype"]:
+        what = f"{p['archetype']} ({elements})" if elements else p["archetype"]
+    else:
+        what = f"{elements} deck"
     note = f" Note: {p['note']}" if p["note"] else ""
     return f"{p['placement']} at {t['name']} ({_dates(t)}): {what}.{note}"
 

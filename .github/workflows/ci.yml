@@ -33,7 +33,7 @@ jobs:
         run: |
           docker run -d --name rag -p 8000:8000 xenoshin-rag:ci
           for i in $(seq 1 30); do curl -fs http://127.0.0.1:8000/health && break; sleep 2; done
-          curl -fs http://127.0.0.1:8000/health | python -c "import json,sys; h=json.load(sys.stdin); assert h['chunks']>0 and h['sources']==4, h; print('health ok', h)"
+          curl -fs http://127.0.0.1:8000/health | python -c "import json,sys; h=json.load(sys.stdin); assert h['chunks']>0 and h['sources']==7, h; print('health ok', h)"
           test "$(curl -s -o /dev/null -w '%{http_code}' -X POST http://127.0.0.1:8000/admin/import)" = 401
           docker run -d --name web -p 8080:8080 xenoshin-portfolio:ci
           sleep 2

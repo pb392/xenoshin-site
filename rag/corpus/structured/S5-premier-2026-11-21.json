@@ -1,0 +1,427 @@
+{
+  "source_id": "S5-premier-2026-11-21",
+  "privacy_note": "Player handles are left out on purpose; placements are stored by position only.",
+  "tournaments": [
+    {
+      "id": "T-PREMIER-2026-11-21",
+      "name": "November 21, 2026 Premier Webcam Tournament (hosted by Elestrals)",
+      "aliases": [
+        "november 21",
+        "nov 21",
+        "11/21",
+        "november premier",
+        "premier on november 21"
+      ],
+      "date_start": "2026-11-21",
+      "date_end": "2026-11-21",
+      "participants": 76
+    }
+  ],
+  "placements": [
+    {
+      "id": "p1",
+      "tournament": "T-PREMIER-2026-11-21",
+      "placement": "1st",
+      "archetype": "Hermes Toolbox",
+      "elements": {
+        "Wind": 13,
+        "Earth": 3,
+        "Water": 3,
+        "Lunar": 1
+      },
+      "deck": "D-PREMIER-2026-11-21-1",
+      "featured_cards": [
+        "Avialith - Champion of Hermes",
+        "Carryon - Champion of Hermes",
+        "Hermes' Trickery",
+        "Hermes",
+        "Fowlicane",
+        "Cyclovenom - Champion of Hermes",
+        "Peliquarius",
+        "Toxiswarm - Champion of Hermes",
+        "Tsunami",
+        "Spinosect - Champion of Hermes"
+      ],
+      "note": "Archetype name from Peter Balasis's notes (2026-11-23); TopElestrals shows only elements and featured cards. Runs Galaxea to answer Apheros decks in the current meta."
+    },
+    {
+      "id": "p2",
+      "tournament": "T-PREMIER-2026-11-21",
+      "placement": "2nd",
+      "archetype": "Hephestia",
+      "elements": {
+        "Fire": 15,
+        "Earth": 4,
+        "Water": 1
+      },
+      "featured_cards": [
+        "Volcanic Forge",
+        "Tongs of Hephaestus",
+        "Warmite - Champion of Hestia",
+        "Hestia's Hearth",
+        "Bellowby",
+        "Volcaries",
+        "Eruption - Hephaestus' Jealousy",
+        "Rummacoal",
+        "Hestia",
+        "Ashrabbit - Champion of Hestia"
+      ],
+      "note": "Archetype name from Peter Balasis's notes (2026-11-23); TopElestrals shows only elements and featured cards."
+    },
+    {
+      "id": "p3",
+      "tournament": "T-PREMIER-2026-11-21",
+      "placement": "Top 4",
+      "archetype": "Hades Trifernal/Sloth",
+      "elements": {
+        "Frost": 9,
+        "Fire": 6,
+        "Earth": 4,
+        "Water": 1
+      },
+      "featured_cards": [
+        "Hades",
+        "Eternal Winter",
+        "Frosmite - Champion of Hades",
+        "Kryoling - Champion of Hades",
+        "Chillalotl - Champion of Khione",
+        "House of Hades",
+        "Cryoblast",
+        "Necruff - Champion of Hades",
+        "Trifernal - Champion of Hades",
+        "Eruption - Hephaestus' Jealousy"
+      ],
+      "note": "Archetype name from Peter Balasis's notes (2026-11-23); TopElestrals shows only elements and featured cards. Named for its bosses, Trifernal (Champion of Hades) and Neandersloth (Champion of Khione)."
+    },
+    {
+      "id": "p4",
+      "tournament": "T-PREMIER-2026-11-21",
+      "placement": "Top 4",
+      "archetype": "Dio Duggy",
+      "elements": {
+        "Earth": 17,
+        "Frost": 1,
+        "Lunar": 1,
+        "Water": 1
+      },
+      "featured_cards": [
+        "Equilynx - Champion of Demeter",
+        "Cyprong - Champion of Dionysus",
+        "Equilynx",
+        "Vysceris",
+        "Midas' Touch",
+        "Sproutyr - Champion of Dionysus",
+        "Duggy",
+        "Gigafflora - Champion of Demeter",
+        "Vysceris - Champion of Demeter",
+        "Centaurbor - Champion of Dionysus"
+      ],
+      "note": "Archetype name from Peter Balasis's notes (2026-11-23); TopElestrals shows only elements and featured cards."
+    },
+    {
+      "id": "p5",
+      "tournament": "T-PREMIER-2026-11-21",
+      "placement": "Top 8",
+      "archetype": "Dem Dio",
+      "elements": {
+        "Earth": 15,
+        "Lunar": 2,
+        "Water": 2,
+        "Frost": 1
+      },
+      "featured_cards": [
+        "Gigafflora - Champion of Demeter",
+        "Dionysus",
+        "Equilynx - Champion of Demeter",
+        "Equilynx",
+        "Demeter",
+        "Mosstacean - Champion of Demeter",
+        "Clovie - Champion of Demeter",
+        "Mudlet - Champion of Demeter",
+        "Midas' Touch",
+        "Satymber - Champion of Dionysus"
+      ],
+      "note": "Archetype name from Peter Balasis's notes (2026-11-23); TopElestrals shows only elements and featured cards."
+    },
+    {
+      "id": "p6",
+      "tournament": "T-PREMIER-2026-11-21",
+      "placement": "Top 8",
+      "archetype": "Dem Dio Hades",
+      "elements": {
+        "Earth": 13,
+        "Frost": 5,
+        "Fire": 2
+      },
+      "featured_cards": [
+        "Equilynx",
+        "Cyanectar - Champion of Dionysus",
+        "Demeter",
+        "Dionysus' Madness",
+        "Sproutyr - Champion of Dionysus",
+        "Cyprong - Champion of Dionysus",
+        "Centaurbor - Champion of Dionysus",
+        "Dionysus",
+        "Satymber - Champion of Dionysus",
+        "Paleoth - Champion of Khione"
+      ],
+      "note": "Archetype name from Peter Balasis's notes (2026-11-23); TopElestrals shows only elements and featured cards."
+    },
+    {
+      "id": "p7",
+      "tournament": "T-PREMIER-2026-11-21",
+      "placement": "Top 8",
+      "archetype": "Dio Duggy",
+      "elements": {
+        "Earth": 18,
+        "Water": 2
+      },
+      "featured_cards": [
+        "Vysceris",
+        "Satymber - Champion of Dionysus",
+        "Foloi Forest",
+        "Dionysus' Madness",
+        "Equilynx",
+        "Sproutyr - Champion of Dionysus",
+        "Cyprong - Champion of Dionysus",
+        "Duggy",
+        "Midas' Touch",
+        "Centaurbor - Champion of Dionysus"
+      ],
+      "note": "Archetype name from Peter Balasis's notes (2026-11-23); TopElestrals shows only elements and featured cards."
+    },
+    {
+      "id": "p8",
+      "tournament": "T-PREMIER-2026-11-21",
+      "placement": "Top 8",
+      "archetype": "Lunar Aggro",
+      "elements": {
+        "Lunar": 17,
+        "Water": 2,
+        "Frost": 1
+      },
+      "featured_cards": [
+        "Rise from the Shadows",
+        "Specteris",
+        "Lunar Phase - Full Moon",
+        "Gloombatt",
+        "Doppelgator",
+        "Gloombatt - Champion of Athena",
+        "Vermilord",
+        "Lycavoid",
+        "Temple of the Moon",
+        "Gnawbie"
+      ],
+      "note": "Archetype name from Peter Balasis's notes (2026-11-23); TopElestrals shows only elements and featured cards. No bosses; built around many removal cards."
+    }
+  ],
+  "decks": [
+    {
+      "id": "D-PREMIER-2026-11-21-1",
+      "tournament": "T-PREMIER-2026-11-21",
+      "placement": "1st",
+      "original_url": "https://www.topelestrals.com/decks/6b0284e4173a513dca773a35",
+      "complete": true,
+      "cards": [
+        {
+          "section": "main",
+          "name": "Poison Tipped Arrow",
+          "set": "DB1-091",
+          "qty": 2
+        },
+        {
+          "section": "main",
+          "name": "Dense Fog",
+          "set": "SD09-23",
+          "qty": 2
+        },
+        {
+          "section": "main",
+          "name": "Avialith - Champion of Hermes",
+          "set": "LST-061",
+          "qty": 1
+        },
+        {
+          "section": "main",
+          "name": "Tsunami",
+          "set": "SD05-22",
+          "qty": 2
+        },
+        {
+          "section": "main",
+          "name": "Carryoff - Champion of Hermes",
+          "set": "FST-049",
+          "qty": 2
+        },
+        {
+          "section": "main",
+          "name": "Carryon - Champion of Hermes",
+          "set": "FST-048",
+          "qty": 2
+        },
+        {
+          "section": "main",
+          "name": "Spinosect - Champion of Hermes",
+          "set": "FST-013",
+          "qty": 3
+        },
+        {
+          "section": "main",
+          "name": "Spinymph - Champion of Hermes",
+          "set": "FST-012",
+          "qty": 3
+        },
+        {
+          "section": "main",
+          "name": "Galaxea - Champion of Poseidon",
+          "set": "FST-033",
+          "qty": 2
+        },
+        {
+          "section": "main",
+          "name": "Hermes' Trickery",
+          "set": "FST-089",
+          "qty": 3
+        },
+        {
+          "section": "main",
+          "name": "Hermes",
+          "set": "FST-086",
+          "qty": 3
+        },
+        {
+          "section": "main",
+          "name": "Galaxea",
+          "set": "SD03-10",
+          "qty": 2
+        },
+        {
+          "section": "main",
+          "name": "Cyanectar - Champion of Dionysus",
+          "set": "LST-017",
+          "qty": 2
+        },
+        {
+          "section": "main",
+          "name": "Fowlicane",
+          "set": "BS1-075",
+          "qty": 1
+        },
+        {
+          "section": "main",
+          "name": "Gorgon's Gaze",
+          "set": "DB1-092",
+          "qty": 3
+        },
+        {
+          "section": "main",
+          "name": "Cyclovenom - Champion of Hermes",
+          "set": "SST-053",
+          "qty": 1
+        },
+        {
+          "section": "main",
+          "name": "Peliquarius",
+          "set": "BS1-079",
+          "qty": 2
+        },
+        {
+          "section": "main",
+          "name": "Shield of Achilles",
+          "set": "SD07-22",
+          "qty": 3
+        },
+        {
+          "section": "main",
+          "name": "Toxiswarm - Champion of Hermes",
+          "set": "SST-052",
+          "qty": 1
+        },
+        {
+          "section": "spirit",
+          "name": "Lycarus",
+          "set": "SS1-012",
+          "qty": 13
+        },
+        {
+          "section": "spirit",
+          "name": "Owlune",
+          "set": "SD08-25",
+          "qty": 1
+        },
+        {
+          "section": "spirit",
+          "name": "Teratlas",
+          "set": "SD01-23",
+          "qty": 3
+        },
+        {
+          "section": "spirit",
+          "name": "Leviaphin",
+          "set": "SS1-040",
+          "qty": 3
+        },
+        {
+          "section": "side",
+          "name": "Flurrmine",
+          "set": "DB1-008",
+          "qty": 1
+        },
+        {
+          "section": "side",
+          "name": "Pandora's Box",
+          "set": "BS1-109",
+          "qty": 2
+        },
+        {
+          "section": "side",
+          "name": "Galaxea - Champion of Poseidon",
+          "set": "FST-033",
+          "qty": 1
+        },
+        {
+          "section": "side",
+          "name": "Spinosect",
+          "set": "SD01-05",
+          "qty": 1
+        },
+        {
+          "section": "side",
+          "name": "Hydrake",
+          "set": "SST-054",
+          "qty": 2
+        },
+        {
+          "section": "side",
+          "name": "Penterror",
+          "set": "SST-056",
+          "qty": 1
+        },
+        {
+          "section": "side",
+          "name": "Galaxea",
+          "set": "SD03-10",
+          "qty": 1
+        },
+        {
+          "section": "side",
+          "name": "Peagust",
+          "set": "SD01-10",
+          "qty": 2
+        },
+        {
+          "section": "side",
+          "name": "Cryoblast",
+          "set": "DB1-078",
+          "qty": 2
+        },
+        {
+          "section": "side",
+          "name": "Spoiled Fruit",
+          "set": "MR1-086",
+          "qty": 2
+        }
+      ]
+    }
+  ]
+}
