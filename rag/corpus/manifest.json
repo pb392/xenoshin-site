@@ -1,5 +1,5 @@
 {
-  "corpus_version": "2026-11-23.1",
+  "corpus_version": "2026-11-23.2",
   "notice": "Unofficial Elestrals fan content. Card names and tournament facts only; no card text or card art is stored.",
   "sources": [
     {
@@ -94,7 +94,7 @@
       "owner": "Peter Balasis",
       "permission": "Own work",
       "status": "author_knowledge",
-      "version": 1,
+      "version": 2,
       "published": "2026-11-23",
       "checked": "2026-11-23"
     }
