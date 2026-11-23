@@ -27,7 +27,7 @@ Rules:
 5. Evidence marked "unknown" means the data is missing: say it is unknown. Never turn a missing count into zero.
 6. If evidence items disagree, say they disagree and cite both.
 7. Answer in at most 120 words. Do not invent card text, decklists or placements.
-8. This app stores no player names. If the question asks who won or who played and the evidence gives the deck or archetype but no player name, answer with the deck or archetype and say that player names are not stored. This counts as answering, not as missing evidence."""
+8. This app stores no player names. If the question asks who won or who played and the evidence gives the deck or archetype but no player name, answer with the deck or archetype and say, without a citation, that player names are not stored. This counts as answering, not as missing evidence. Never cite rule numbers."""
 
 
 @dataclass
@@ -55,7 +55,7 @@ def build_prompt(question: str, evidence: list[Evidence], coverage: str) -> str:
     return "\n".join(lines)
 
 
-CITATION = re.compile(r"\[([^\[\]]{3,200})\]")
+CITATION = re.compile(r"\[([^\[\]]{1,300})\]")  # any [..]: unknown IDs, rule numbers like [8], etc. are removed
 
 
 def check_citations(text: str, allowed: set[str]) -> tuple[str, list[str], list[str]]:

@@ -163,3 +163,9 @@ def test_nov21_premier_and_worlds_decklist(loaded):
     assert "3 in the main deck" in worlds and "2026-03-21" in worlds
     nov = " ".join(f.text for f in structured_facts(conn, "How many Gorgon's Gaze in the November 21 winning deck?"))
     assert "3 in the main deck" in nov
+
+
+def test_rule_number_brackets_are_not_left_as_citations():
+    from app.answer import check_citations
+    text, valid, removed = check_citations("Hermes Toolbox won [S5#p1]. Player names are not stored [8].", {"S5#p1"})
+    assert text == "Hermes Toolbox won [S5#p1]. Player names are not stored." and valid == ["S5#p1"] and removed == ["8"]
