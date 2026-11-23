@@ -13,7 +13,7 @@ The research and planning record is in [pb392/is373-individual-record](https://g
 
 ```
 corpus/manifest.json ──► importer ──► SQLite (/data/rag.sqlite3, persistent volume)
-  4 permitted sources         │        ├─ sources        (owner, permission, version, verification status)
+  7 permitted sources         │        ├─ sources        (owner, permission, version, verification status)
   stable IDs + versions       │        ├─ chunks + FTS5  (heading/paragraph chunks, keyword index)
                               │        ├─ embeddings     (Gemini gemini-embedding-2, 768 dims, stored per chunk)
                               │        └─ tournaments · placements · decks · deck_cards · archetype_bosses
@@ -33,12 +33,14 @@ evidence ──► Gemini (gemini-3.5-flash-lite) with "cite or refuse" rules �
 
 * `python -m pytest rag/tests`: core tests use **test-only** hash embeddings and scripted generators; they check import/retrieval/citation logic, not Gemini's quality.
 * `python scripts/check_site.py`: portfolio links, anchors, one `h1`, `lang`, viewport.
-* CI ([`ci.yml`](.github/workflows/ci.yml)) runs both, builds both images and smoke-tests the containers. Only after it passes does CI move the `release` branch.
-* [`hosted-check.yml`](.github/workflows/hosted-check.yml) runs the evaluation questions ([`rag/eval/questions.json`](rag/eval/questions.json), expected answers written first) against the live site and commits the actual responses to [`rag/eval/hosted/`](rag/eval/hosted).
+* `python scripts/check_ui.py BASE PATH...` (Playwright): Tab reaches every link with visible focus; no sideways scrolling and readable text at 375px.
+* `python scripts/check_links.py BASE OUT.md PATH...`: opens every link on the hosted portfolio.
+* CI ([`ci.yml`](.github/workflows/ci.yml)) runs these, builds both images, smoke-tests the containers, runs a restart / repeat-import / backup-and-restore drill on a named volume, and runs the keyboard and phone-width checks. Only after it passes does CI move the `release` branch.
+* [`hosted-check.yml`](.github/workflows/hosted-check.yml) runs the evaluation questions ([`rag/eval/questions.json`](rag/eval/questions.json), expected answers written first) against the live site, opens every portfolio link, runs the keyboard and phone-width checks on the live sites, and commits the results to [`rag/eval/hosted/`](rag/eval/hosted).
 
 ## Deployment
 
-The droplet runs `deploy/auto-deploy.sh` every 2 minutes from cron: if `release` moved, it pulls and runs `docker compose up -d --build`. One-time setup: [`deploy/setup.sh`](deploy/setup.sh). Secrets (`GEMINI_API_KEY`, `ADMIN_TOKEN`) live only in the server's `.env` (mode 600), never in Git.
+The droplet runs `deploy/auto-deploy.sh` every 2 minutes from cron: if `release` moved, it pulls and runs `docker compose up -d --build`. One-time setup: [`deploy/setup.sh`](deploy/setup.sh). Setup, backup and restore, rollback and key changes: [operations guide](docs/operations.md). Secrets (`GEMINI_API_KEY`, `ADMIN_TOKEN`) live only in the server's `.env` (mode 600), never in Git.
 
 Run locally: `cd rag && pip install -r requirements.txt && RAG_DB_PATH=./local.sqlite3 GEMINI_API_KEY=... python -m app.importer && RAG_DB_PATH=./local.sqlite3 GEMINI_API_KEY=... uvicorn app.main:create_app --factory`.
 

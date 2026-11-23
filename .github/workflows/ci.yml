@@ -24,7 +24,7 @@ jobs:
       - name: Portfolio link and structure checks
         run: python scripts/check_site.py
       - name: Shell syntax
-        run: sh -n deploy/setup.sh && sh -n deploy/auto-deploy.sh
+        run: sh -n deploy/setup.sh && sh -n deploy/auto-deploy.sh && sh -n deploy/backup.sh
       - name: Build images
         run: |
           docker build -t xenoshin-rag:ci --build-arg GIT_COMMIT=${{ github.sha }} rag
@@ -39,6 +39,31 @@ jobs:
           sleep 2
           curl -fs http://127.0.0.1:8080/ | grep -q "I build and test the systems behind games"
           echo "smoke ok"
+      - name: Restart, repeat-import and backup/restore drill (named volume, like the server)
+        run: |
+          cat > drill.yaml <<'YAML'
+          services:
+            rag:
+              image: xenoshin-rag:ci
+              volumes: [drill-data:/data]
+          volumes:
+            drill-data:
+          YAML
+          export COMPOSE="docker compose -f drill.yaml -p drill"
+          $COMPOSE up -d
+          runs() { $COMPOSE exec -T rag python -c "import sqlite3; print(sqlite3.connect('/data/rag.sqlite3').execute('select count(*) from import_runs').fetchone()[0])"; }
+          for i in $(seq 1 30); do $COMPOSE exec -T rag test -s /data/last-import.json && break; sleep 2; done
+          test "$(runs)" = 1
+          $COMPOSE restart rag; sleep 8
+          test "$(runs)" = 2                                   # data survived the restart
+          $COMPOSE exec -T rag python -c "import json; r=json.load(open('/data/last-import.json')); assert all(s['new']==0 and s['changed']==0 for s in r['sources']), r; print('repeat import: 0 new, 0 changed')"
+          HOME=$PWD sh deploy/backup.sh backup
+          $COMPOSE down -v                                     # destroy the container AND the volume
+          $COMPOSE up -d; sleep 8
+          test "$(runs)" = 1                                   # fresh volume: history is gone
+          HOME=$PWD sh deploy/backup.sh restore backups/rag-*.sqlite3; sleep 8
+          test "$(runs)" -ge 2                                 # history is back after restore
+          echo "drill ok"; $COMPOSE down -v
       - name: Keyboard and phone-width checks (Playwright, against the CI containers)
         run: |
           pip install playwright==1.49.1
