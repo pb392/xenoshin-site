@@ -1,6 +1,6 @@
 {
   "base": "https://rag.xenoshin.com",
-  "started": "2026-11-23T16:46:18Z",
+  "started": "2026-11-23T17:36:43Z",
   "health": {
     "status": "ok",
     "commit": "d6ae784aff46057b85d34272a18ab6106c40d8fa",
@@ -27,12 +27,11 @@
       },
       "response": {
         "question": "What archetype won the 2026 Elestrals World Championship?",
-        "answer": "The Celestleo (or Celestleo's Pride) archetype won the 2026 Elestrals World Championship [S1-worlds-2026#placement-worlds-1st; S1-worlds-2026#1; S1-worlds-2026#2].",
+        "answer": "The 2026 Elestrals World Championship was won by the Celestleo archetype [S1-worlds-2026#placement-worlds-1st; S1-worlds-2026#1]. Mike Thomas (Trishula) won the event using a Celestleo decklist [S1-worlds-2026#placement-worlds-1st; S1-worlds-2026#1].",
         "status": "answered",
         "citations": [
           "S1-worlds-2026#placement-worlds-1st",
-          "S1-worlds-2026#1",
-          "S1-worlds-2026#2"
+          "S1-worlds-2026#1"
         ],
         "removed_citations": [],
         "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
@@ -185,11 +184,10 @@
       },
       "response": {
         "question": "Which deck did the first world champ play?",
-        "answer": "The first Elestrals World Champion, Mike Thomas (Trishula), won with a Celestleo deck [S1-worlds-2026#1]. This deck belongs to the Celestleo's Pride archetype, which builds around the Solar Elestral Celestleo and uses the Foretell mechanic [S1-worlds-2026#2].",
+        "answer": "The first Elestrals World Champion, Mike Thomas (Trishula), won with a Celestleo deck [S1-worlds-2026#1].",
         "status": "answered",
         "citations": [
-          "S1-worlds-2026#1",
-          "S1-worlds-2026#2"
+          "S1-worlds-2026#1"
         ],
         "removed_citations": [],
         "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
@@ -335,7 +333,7 @@
       },
       "response": {
         "question": "Which elements were most featured among the top Elestrals at Worlds?",
-        "answer": "Solar and Water were the elements most featured among the top Elestrals at Worlds [S1-worlds-2026#3].",
+        "answer": "Solar and Water were the elements most featured among the top Elestrals at Worlds, because Celestleo's Pride and Fish Nexus led the field [S1-worlds-2026#3].",
         "status": "answered",
         "citations": [
           "S1-worlds-2026#3"
@@ -1078,11 +1076,12 @@
       },
       "response": {
         "question": "Which decks run Neandersloth CoKhione?",
-        "answer": "According to the author's notes, Neandersloth CoKhione is played by four archetypes: Dem Dio Hades, Dio Duggy (Dionysus Duggy), Hades Sloth, and Hades Trifernal/Sloth [S3-note-02#boss-neandersloth-cokhione; S3-note-02#5].",
+        "answer": "According to the author's notes, Neandersloth CoKhione is played by four archetypes: Dem Dio Hades, Dio Duggy, Hades Sloth, and Hades Trifernal/Sloth [S3-note-02#boss-neandersloth-cokhione]. Specifically, the Dio Duggy (Dionysus Duggy) archetype plays Neandersloth CoKhione, and the Hades Sloth archetype also plays Neandersloth CoKhione [S3-note-02#5; S3-note-02#2].",
         "status": "answered",
         "citations": [
           "S3-note-02#boss-neandersloth-cokhione",
-          "S3-note-02#5"
+          "S3-note-02#5",
+          "S3-note-02#2"
         ],
         "removed_citations": [],
         "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
@@ -1404,11 +1403,9 @@
       },
       "response": {
         "question": "Who won the November 21 Premier?",
-        "answer": "According to the provided data, the winner of the November 21, 2026 Premier Webcam Tournament played a Hermes Toolbox deck [S5-premier-2026-11-21#placement-p1]. The specific player's name is not listed in the evidence.",
-        "status": "answered",
-        "citations": [
-          "S5-premier-2026-11-21#placement-p1"
-        ],
+        "answer": "I don't have a source for that in my imported data.",
+        "status": "insufficient",
+        "citations": [],
         "removed_citations": [],
         "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
         "model": "gemini-3.5-flash-lite",
@@ -1542,8 +1539,12 @@
         ],
         "commit": "d6ae784aff46057b85d34272a18ab6106c40d8fa"
       },
-      "passed": true,
-      "problems": []
+      "passed": false,
+      "problems": [
+        "expected an answer, got status insufficient",
+        "no citation from ['S5-premier-2026-11-21'] (cited [])",
+        "answer missing 'Hermes Toolbox'"
+      ]
     },
     {
       "item": {
@@ -1881,11 +1882,10 @@
       },
       "response": {
         "question": "What is a Hestia Spiders deck?",
-        "answer": "According to the author's notes, a Hestia Spiders deck is a Hestia deck that incorporates Wind cards and is built around the Hestia spider Elestrals Kitemite and Parachne, which are both Champions of Hestia [S3-note-03#3; S3-note-03#1].",
+        "answer": "According to the author's notes, a Hestia Spiders deck is a Hestia deck that incorporates Wind cards and is built around the Hestia spider Elestrals Kitemite and Parachne, which are both Champions of Hestia [S3-note-03#3].",
         "status": "answered",
         "citations": [
-          "S3-note-03#3",
-          "S3-note-03#1"
+          "S3-note-03#3"
         ],
         "removed_citations": [],
         "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
