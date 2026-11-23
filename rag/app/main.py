@@ -315,6 +315,6 @@ button{padding:10px 18px;border:0;border-radius:8px;background:var(--accent);col
 .notice{background:#3a2a10;padding:10px;border-radius:8px}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.9rem}
 th,td{border:1px solid #333559;padding:6px 8px;text-align:left;vertical-align:top}pre{white-space:pre-wrap;background:#0b0c18;padding:12px;border-radius:8px;font-size:.8rem;overflow-x:auto}
 code{font-size:.85em}.chunk{border-left:3px solid var(--accent);padding-left:12px;margin:12px 0}.chunk:target,section:target,p:target{background:#2a2b10}
-dl.meta{display:grid;grid-template-columns:max-content 1fr;gap:4px 16px}dl.meta dt{font-weight:600}.examples,.trace{margin:12px 0}
+dl.meta{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px 16px}dd{min-width:0;margin:0}a,code,td,dd{overflow-wrap:anywhere}@media(max-width:600px){dl.meta{grid-template-columns:1fr}dl.meta dd{margin-bottom:8px}}dl.meta dt{font-weight:600}.examples,.trace{margin:12px 0}
 """
 

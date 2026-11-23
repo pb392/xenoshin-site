@@ -1,7 +1,8 @@
 """Browser checks for keyboard use and phone-width readability.
 
 For every page given:
-  * keyboard: pressing Tab from the top reaches every visible link and button,
+  * keyboard: pressing Tab from the top reaches every visible link and control
+    (links inside a closed <details> count once it is opened, so they are skipped),
     the first stop is the skip link on pages with navigation, and each focused element shows a visible
     focus indicator (outline or box-shadow);
   * phone width (375 x 740): the page does not scroll sideways and body text is
@@ -24,7 +25,8 @@ FOCUS_STYLE = """el => {
   return outline || shadow;
 }"""
 
-TARGETS = """() => { const els = [...document.querySelectorAll('a[href], button, input, textarea, select')]
+TARGETS = """() => { const els = [...document.querySelectorAll('a[href], button, input, textarea, select, summary')]
+  .filter(el => !(el.tagName !== 'SUMMARY' && el.closest('details:not([open])')))
   .filter(el => { const r = el.getBoundingClientRect(); const s = getComputedStyle(el);
                   return (r.width > 0 && r.height > 0 && s.visibility !== 'hidden') || el.classList.contains('skip'); });
   els.forEach((el, i) => el.dataset.uiCheck = String(i));
