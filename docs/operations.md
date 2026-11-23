@@ -80,7 +80,7 @@ For the admin token: generate a new one with `head -c 24 /dev/urandom | od -An -
 | Symptom | Look at |
 |---|---|
 | Site down | `docker compose ps` (both services "healthy"?), `docker compose logs --tail 50 rag` |
-| Changes not showing up | `tail ~/xenoshin-site-deploy.log`; did CI pass and move `release`? |
+| Changes not showing up | `tail ~/xenoshin-site-deploy.log`; did CI pass and move `release`? "Permission denied" means cron can't run the script: run `sh ~/xenoshin-site/deploy/auto-deploy.sh` once (this happened on 2026-11-23; the scripts are now stored as executable and CI checks that). |
 | Answers say "generation unavailable" | Gemini key or quota: `docker compose logs rag | grep -i gemini` |
 | Server low on memory | `free -m`; limits are 300 MB for `rag`, 64 MB for `portfolio` |
 | Import failed | `docker compose exec -T rag cat /data/last-import.json` |

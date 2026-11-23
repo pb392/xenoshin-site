@@ -49,7 +49,7 @@ start() {
   echo "== Building and starting (first build takes a few minutes)"
   GIT_COMMIT=$(git rev-parse HEAD) docker compose up -d --build --remove-orphans
   chmod +x deploy/auto-deploy.sh
-  line="*/2 * * * * $DIR/deploy/auto-deploy.sh >> $HOME/xenoshin-site-deploy.log 2>&1"
+  line="*/2 * * * * sh $DIR/deploy/auto-deploy.sh >> $HOME/xenoshin-site-deploy.log 2>&1"   # sh: works even if the file loses its execute bit
   (crontab -l 2>/dev/null | grep -v 'xenoshin-site/deploy/auto-deploy.sh' || true; echo "$line") | crontab -
   echo "== Auto-deploy installed (checks for new releases every 2 minutes)"
   sleep 20

@@ -24,7 +24,11 @@ jobs:
       - name: Portfolio link and structure checks
         run: python scripts/check_site.py
       - name: Shell syntax
-        run: sh -n deploy/setup.sh && sh -n deploy/auto-deploy.sh && sh -n deploy/backup.sh
+        run: |
+          sh -n deploy/setup.sh && sh -n deploy/auto-deploy.sh && sh -n deploy/backup.sh
+          # cron runs auto-deploy.sh directly on older setups, and git reset restores the stored mode,
+          # so the scripts must be stored as executable (100755).
+          for f in deploy/setup.sh deploy/auto-deploy.sh deploy/backup.sh; do git ls-files -s "$f" | grep -q '^100755' || { echo "$f is not executable in git"; exit 1; }; done
       - name: Build images
         run: |
           docker build -t xenoshin-rag:ci --build-arg GIT_COMMIT=${{ github.sha }} rag
