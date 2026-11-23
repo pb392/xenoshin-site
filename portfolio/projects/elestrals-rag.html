@@ -62,12 +62,13 @@
       <table>
         <thead><tr><th>Check</th><th>Where</th><th>Result</th></tr></thead>
         <tbody>
-          <tr><td>17 evaluation questions, expected answers written before the run, including 6 that test missing evidence (an event, decklist or card text that isn't imported)</td><td>Hosted</td><td><a href="https://github.com/pb392/xenoshin-site/blob/main/rag/eval/hosted/2026-11-23T1646Z/results.md">17 of 17 passed (Nov 23)</a></td></tr>
+          <tr><td>17 evaluation questions, expected answers written before the run, including 6 that test missing evidence (an event, decklist or card text that isn't imported)</td><td>Hosted</td><td><a href="https://github.com/pb392/xenoshin-site/blob/main/rag/eval/hosted/2026-11-23T1904Z/results.md">17 of 17 passed (Nov 23, release v1.0.0)</a>. Two earlier runs that day scored 16 of 17; <a href="https://github.com/pb392/xenoshin-site/blob/main/rag/eval/hosted/README.md">every run is kept, with what went wrong</a></td></tr>
           <tr><td>Data survives an update: the Nov 19 import is still listed after the Nov 23 release, and only the 10 new text passages were embedded</td><td>Hosted</td><td><a href="https://rag.xenoshin.com/import-record">Import record</a></td></tr>
           <tr><td>Restart keeps data; repeat import is 0 new, 0 changed; backup, delete the volume, restore</td><td>CI</td><td><a href="https://github.com/pb392/xenoshin-site/actions/workflows/ci.yml">Passes on every change</a></td></tr>
-          <tr><td>Keyboard: Tab reaches every link with visible focus. Phone: no sideways scrolling at 375px</td><td>CI and hosted</td><td>Passes. The check caught a source page that scrolled sideways on phones; fixed.</td></tr>
+          <tr><td>Keyboard: Tab reaches every link with visible focus. Phone: no sideways scrolling at 375px</td><td>CI and hosted</td><td><a href="https://github.com/pb392/xenoshin-site/blob/main/rag/eval/hosted/2026-11-23T1904Z/ui.md">10 of 10 pages pass</a>. The check caught a source page that scrolled sideways on phones; fixed.</td></tr>
+          <tr><td>Every link on this portfolio opens</td><td>Hosted</td><td><a href="https://github.com/pb392/xenoshin-site/blob/main/rag/eval/hosted/2026-11-23T1904Z/links.md">23 links, 0 broken</a> (LinkedIn blocks automated checks; opened by hand)</td></tr>
           <tr><td>Admin import refuses requests without the token</td><td>CI and hosted</td><td>401 as expected</td></tr>
-          <tr><td>Logic tests (import, search, citation checks) with test-only fake embeddings</td><td>Local and CI</td><td>17 passed. These don't measure Gemini's quality; the hosted questions do.</td></tr>
+          <tr><td>Logic tests (import, search, citation checks) with test-only fake embeddings</td><td>Local and CI</td><td>18 passed. These don't measure Gemini's quality; the hosted questions do.</td></tr>
         </tbody>
       </table>
     </div>
