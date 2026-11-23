@@ -210,13 +210,34 @@ def create_app(settings: Settings | None = None, embedder=None, generator=None, 
     @app.get("/import-record", response_class=HTMLResponse)
     def import_record() -> str:
         with db_lock:
-            runs = conn.execute("SELECT * FROM import_runs ORDER BY id DESC LIMIT 5").fetchall()
-        items = "".join(
-            f"<section><h2>Run {r['id']} · {html.escape(r['finished_at'] or '')}</h2><p>Corpus {html.escape(r['corpus_version'] or '')} · commit <code>{html.escape((r['commit_sha'] or '')[:12])}</code></p>"
-            f"<pre>{html.escape(json.dumps(json.loads(r['report']), indent=2))}</pre></section>"
-            for r in runs
+            runs = conn.execute("SELECT * FROM import_runs ORDER BY id DESC").fetchall()
+        rows = []
+        for r in runs:
+            rep = json.loads(r["report"])
+            srcs = rep.get("sources", [])
+            new = sum(x.get("new", 0) for x in srcs)
+            changed = sum(x.get("changed", 0) for x in srcs)
+            unchanged = sum(x.get("unchanged", 0) for x in srcs)
+            embedded = (rep.get("embedding") or {}).get("embedded_now", 0)
+            rows.append(
+                f"<tr><td><a href='#run-{r['id']}'>{r['id']}</a></td><td>{html.escape(r['finished_at'] or '')}</td>"
+                f"<td><code>{html.escape((r['commit_sha'] or '')[:7])}</code></td><td>{html.escape(r['corpus_version'] or '')}</td>"
+                f"<td>{len(srcs)}</td><td>{new}</td><td>{changed}</td><td>{unchanged}</td><td>{embedded}</td></tr>"
+            )
+        table = (
+            "<div class='table-wrap'><table><thead><tr><th>Run</th><th>Finished (UTC)</th><th>Commit</th><th>Corpus</th>"
+            "<th>Sources</th><th>New chunks</th><th>Changed</th><th>Unchanged</th><th>Embedded</th></tr></thead>"
+            f"<tbody>{''.join(rows)}</tbody></table></div>"
         )
-        return _page("Import record", "<h1>Import record</h1><p>The five most recent import runs, newest first. A repeat import should show 0 new, 0 changed and 0 embedded.</p>" + items, settings.commit)
+        details = "".join(
+            f"<details id='run-{r['id']}'{' open' if i == 0 else ''}><summary>Run {r['id']} full report</summary>"
+            f"<pre>{html.escape(json.dumps(json.loads(r['report']), indent=2))}</pre></details>"
+            for i, r in enumerate(runs)
+        )
+        intro = ("<h1>Import record</h1><p>Every import run stored in this app's database, newest first. The import runs each time "
+                 "the app starts, so this list also shows that the database survives restarts and updates. A repeat import with no "
+                 "data changes should show 0 new, 0 changed and 0 embedded.</p>")
+        return _page("Import record", intro + table + "<h2>Full reports</h2>" + details, settings.commit)
 
     @app.post("/admin/import")
     def admin_import(authorization: str | None = Header(default=None)) -> dict:
