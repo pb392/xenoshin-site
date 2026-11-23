@@ -22,21 +22,21 @@
 
   <main id="main" class="wrap">
     <section class="hero">
-      <span class="badge live">Live · case study in progress</span>
+      <span class="badge live">Live · checked release v1.0.0</span>
       <h1>Elestrals Meta Assistant</h1>
       <p class="lead">Ask a question about the competitive Elestrals card game and get a short answer that links to the exact tournament result, decklist or note it came from.</p>
       <a class="cta" href="https://rag.xenoshin.com">Open the app</a>
       <a class="cta secondary" href="https://github.com/pb392/xenoshin-site/tree/main/rag">Read the code</a>
     </section>
 
-    <div class="note"><strong>Status (Build stage, November 2026):</strong> import, search and cited answers are working and hosted. The full case study, measured results and accessibility checks come at the release stage in December. This page says only what has been built so far.</div>
+    <div class="note"><strong>Status (Checked Release, November 2026):</strong> hosted, with 7 sources and dated results from the live site below. Every number on this page links to the run it came from.</div>
 
     <h2>The problem</h2>
     <p>Players preparing for a tournament want to know what's winning, but the information is scattered across official articles, community results sites and people's own notes. A general chatbot may confidently invent decklists. This app answers only from sources it has imported, and says so when it can't.</p>
 
     <h2>How it works</h2>
     <ol>
-      <li><strong>Import:</strong> four permitted sources are loaded with stable IDs, versions and a verification status. Running the import again changes nothing.</li>
+      <li><strong>Import:</strong> seven permitted sources are loaded with stable IDs, versions and a verification status. Running the import again changes nothing.</li>
       <li><strong>Represent:</strong> text is split into small passages (with keyword and meaning-based search indexes). Tournament results, decklists and which archetypes play which boss go into database tables, because exact counts and relationships are a poor fit for similarity search.</li>
       <li><strong>Retrieve:</strong> each question gets keyword and vector search results, merged together, plus exact database lookups.</li>
       <li><strong>Answer:</strong> Google Gemini writes a short answer using only that evidence. The app then checks every citation, removes any that don't match, and withholds answers with no valid citation.</li>
@@ -56,19 +56,44 @@
       </table>
     </div>
 
+    <h2>Results</h2>
+    <p>Each result says where it was measured: <strong>local</strong> (my machine), <strong>CI</strong> (GitHub Actions, on every change) or <strong>hosted</strong> (the live site).</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Check</th><th>Where</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td>17 evaluation questions, expected answers written before the run, including 6 that test missing evidence (an event, decklist or card text that isn't imported)</td><td>Hosted</td><td><a href="https://github.com/pb392/xenoshin-site/blob/main/rag/eval/hosted/2026-11-23/results.md">17 of 17 passed (Nov 23)</a></td></tr>
+          <tr><td>Data survives an update: the Nov 19 import is still listed after the Nov 23 release, and only the 10 new text passages were embedded</td><td>Hosted</td><td><a href="https://rag.xenoshin.com/import-record">Import record</a></td></tr>
+          <tr><td>Restart keeps data; repeat import is 0 new, 0 changed; backup, delete the volume, restore</td><td>CI</td><td><a href="https://github.com/pb392/xenoshin-site/actions/workflows/ci.yml">Passes on every change</a></td></tr>
+          <tr><td>Keyboard: Tab reaches every link with visible focus. Phone: no sideways scrolling at 375px</td><td>CI and hosted</td><td>Passes. The check caught a source page that scrolled sideways on phones; fixed.</td></tr>
+          <tr><td>Admin import refuses requests without the token</td><td>CI and hosted</td><td>401 as expected</td></tr>
+          <tr><td>Logic tests (import, search, citation checks) with test-only fake embeddings</td><td>Local and CI</td><td>17 passed. These don't measure Gemini's quality; the hosted questions do.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <h2>Evidence</h2>
     <ul class="evidence">
       <li><a href="https://rag.xenoshin.com">Live app</a>: ask a question, then open "How this answer was found" to see the full trace.</li>
       <li><a href="https://rag.xenoshin.com/sources">Source list</a> and <a href="https://rag.xenoshin.com/import-record">import record</a></li>
+      <li><a href="https://github.com/pb392/xenoshin-site/tree/main/rag/eval/hosted">All hosted check results</a>, dated</li>
+      <li><a href="https://github.com/pb392/xenoshin-site/blob/main/docs/operations.md">Operations guide</a>: setup, backup and restore, rollback, key changes</li>
       <li><a href="https://github.com/pb392/xenoshin-site/actions">Automated tests (GitHub Actions)</a>, which must pass before the server updates</li>
       <li><a href="https://github.com/pb392/is373-individual-record#2-individual-rag-app--technical-research">Research and planning record</a></li>
     </ul>
 
-    <h2>Limits right now</h2>
+    <h2>Limits</h2>
     <ul>
-      <li>The data is small: one official Worlds summary, one Premier's top 8 with the winning decklist, and two sets of my own notes.</li>
-      <li>The Columbus Open results come only from my notes until TopElestrals posts them.</li>
-      <li>A citation shows where an answer came from; it doesn't guarantee every sentence is right.</li>
+      <li>The data is small: the Worlds summary and winning decklist, two Premiers (top 8 and the winning decklist each), and three sets of my own notes. Only winning decklists are imported, so the app can't count cards in other decks and says so.</li>
+      <li>The Columbus Open results come only from my notes; TopElestrals hasn't posted them.</li>
+      <li>Archetype names for the November 21 Premier are mine; TopElestrals shows only elements. Each result says which part came from where.</li>
+      <li>17 questions is a small test. A citation shows where an answer came from; it doesn't guarantee every sentence is right.</li>
+    </ul>
+
+    <h2>What I'd do next</h2>
+    <ul>
+      <li>Import new Premiers automatically when TopElestrals posts them, instead of by hand.</li>
+      <li>Grow the question set from real questions players ask, and track the pass rate over time.</li>
     </ul>
 
     <p class="note">Unofficial Elestrals fan content; not endorsed or approved by Elestrals. Portions of the materials used are the property of Elestrals LLC. See the <a href="https://www.elestrals.com/fan-content-policy">Elestrals Fan Content Policy</a>.</p>
