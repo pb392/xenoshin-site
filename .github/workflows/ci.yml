@@ -39,6 +39,12 @@ jobs:
           sleep 2
           curl -fs http://127.0.0.1:8080/ | grep -q "I build and test the systems behind games"
           echo "smoke ok"
+      - name: Keyboard and phone-width checks (Playwright, against the CI containers)
+        run: |
+          pip install playwright==1.49.1
+          python -m playwright install --with-deps chromium
+          python scripts/check_ui.py http://127.0.0.1:8080 / /about.html /projects/elestrals-rag.html /projects/ci-cd.html /projects/group.html /404.html
+          python scripts/check_ui.py http://127.0.0.1:8000 / /sources /sources/S5-premier-2026-11-21 /import-record
 
   release:
     # The server deploys only this branch, so it moves only after every check passed.

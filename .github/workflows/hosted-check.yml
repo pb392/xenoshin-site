@@ -23,6 +23,20 @@ jobs:
           test "$(curl -s -o /dev/null -w '%{http_code}' -X POST https://rag.xenoshin.com/admin/import)" = 401
       - name: Run evaluation questions
         run: python rag/eval/run_eval.py https://rag.xenoshin.com rag/eval/hosted/$(date -u +%Y-%m-%d)
+      - name: Open every portfolio link
+        run: |
+          OUT=rag/eval/hosted/$(date -u +%Y-%m-%d)
+          python scripts/check_links.py https://xenoshin.com $OUT/links.md / /about.html /projects/elestrals-rag.html /projects/ci-cd.html /projects/group.html || echo links >> failed.txt
+      - name: Keyboard and phone-width checks on the live sites
+        run: |
+          OUT=rag/eval/hosted/$(date -u +%Y-%m-%d)
+          pip install playwright==1.49.1
+          python -m playwright install --with-deps chromium
+          { echo '# Keyboard and phone-width check (hosted)'; echo; echo '```'
+            python scripts/check_ui.py https://xenoshin.com / /about.html /projects/elestrals-rag.html /projects/ci-cd.html /projects/group.html /404.html || echo ui >> failed.txt
+            python scripts/check_ui.py https://rag.xenoshin.com / /sources /sources/S5-premier-2026-11-21 /import-record || echo ui >> failed.txt
+            echo '```'; } > $OUT/ui.md
+          cat $OUT/ui.md
       - name: Save results to the repository
         run: |
           git config user.name "github-actions[bot]"
@@ -30,3 +44,5 @@ jobs:
           git add rag/eval/hosted
           git commit -m "Hosted evaluation results $(date -u +%FT%TZ) [skip ci]" || echo "nothing to commit"
           git push
+      - name: Fail if a link or UI check failed (results are still saved above)
+        run: test ! -f failed.txt || { cat failed.txt; exit 1; }
