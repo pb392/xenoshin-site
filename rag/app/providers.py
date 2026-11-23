@@ -9,6 +9,7 @@ semantic quality.
 from __future__ import annotations
 
 import hashlib
+import http.client
 import json
 import math
 import re
@@ -68,6 +69,13 @@ def _post_json(url: str, api_key: str, body: dict, timeout: float = 30.0, retrie
                 time.sleep(2 * (attempt + 1))
                 continue
             raise ProviderError(f"Could not reach the Gemini API: {exc.reason}") from None
+        except (TimeoutError, OSError, http.client.HTTPException, ValueError) as exc:
+            # A timeout or dropped connection while reading the reply, or a reply that
+            # isn't JSON. Before 2026-11-23 these escaped as HTTP 500 (hosted run 1921Z, Q4).
+            if attempt < retries:
+                time.sleep(2 * (attempt + 1))
+                continue
+            raise ProviderError(f"Gemini API reply failed: {type(exc).__name__}") from None
     raise ProviderError("Gemini API request failed")
 
 

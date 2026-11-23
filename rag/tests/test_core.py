@@ -169,3 +169,20 @@ def test_rule_number_brackets_are_not_left_as_citations():
     from app.answer import check_citations
     text, valid, removed = check_citations("Hermes Toolbox won [S5#p1]. Player names are not stored [8].", {"S5#p1"})
     assert text == "Hermes Toolbox won [S5#p1]. Player names are not stored." and valid == ["S5#p1"] and removed == ["8"]
+
+
+def test_timeout_while_reading_gemini_reply_becomes_provider_error(monkeypatch):
+    import urllib.request
+    from app import providers
+    calls = []
+
+    def boom(*args, **kwargs):
+        calls.append(1)
+        raise TimeoutError("The read operation timed out")
+
+    monkeypatch.setattr(urllib.request, "urlopen", boom)
+    monkeypatch.setattr(providers.time, "sleep", lambda s: None)
+    import pytest
+    with pytest.raises(providers.ProviderError):
+        providers._post_json("https://example.test", "k", {}, retries=2)
+    assert len(calls) == 3  # retried twice before giving up
