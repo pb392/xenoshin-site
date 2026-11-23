@@ -1,0 +1,2650 @@
+{
+  "base": "https://rag.xenoshin.com",
+  "started": "2026-11-23T20:00:42Z",
+  "health": {
+    "status": "ok",
+    "commit": "753f69110f79aaaefe3308f8fb4f8954f39b3540",
+    "sources": 7,
+    "chunks": 27,
+    "chunks_with_embeddings": 27,
+    "last_import": "2026-11-23T20:00:08Z",
+    "embed_model": "gemini-embedding-2",
+    "generation_model": "gemini-3.5-flash-lite"
+  },
+  "results": [
+    {
+      "item": {
+        "id": "Q1",
+        "question": "What archetype won the 2026 Elestrals World Championship?",
+        "tests": "direct fact",
+        "expect_status": "answered",
+        "expect_sources": [
+          "S1-worlds-2026"
+        ],
+        "expect_terms": [
+          "Celestleo"
+        ]
+      },
+      "response": {
+        "question": "What archetype won the 2026 Elestrals World Championship?",
+        "answer": "The 2026 Elestrals World Championship was won by the Celestleo archetype [S1-worlds-2026#placement-worlds-1st; S1-worlds-2026#1]. It was won by Mike Thomas, who plays under the name Trishula [S1-worlds-2026#placement-worlds-1st; S1-worlds-2026#1].",
+        "status": "answered",
+        "citations": [
+          "S1-worlds-2026#placement-worlds-1st",
+          "S1-worlds-2026#1"
+        ],
+        "removed_citations": [],
+        "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
+        "model": "gemini-3.5-flash-lite",
+        "warnings": [],
+        "retrieval_mode": "hybrid",
+        "keyword_hits": [
+          [
+            "S1-worlds-2026#1",
+            9.996357712182421
+          ],
+          [
+            "S1-worlds-2026#4",
+            5.2766511195582595
+          ],
+          [
+            "S1-worlds-2026#3",
+            4.603050316072738
+          ],
+          [
+            "S1-worlds-2026#2",
+            4.498052024737332
+          ],
+          [
+            "S4-worlds-2026-decklist#1",
+            2.763404413652636
+          ],
+          [
+            "S3-note-03#4",
+            2.2110677226053697
+          ],
+          [
+            "S3-note-03#1",
+            1.360631395033348
+          ],
+          [
+            "S2-premier-2026-10-24#1",
+            1.326675470795349
+          ]
+        ],
+        "vector_hits": [
+          [
+            "S1-worlds-2026#2",
+            0.8805
+          ],
+          [
+            "S1-worlds-2026#1",
+            0.8505
+          ],
+          [
+            "S1-worlds-2026#3",
+            0.8417
+          ],
+          [
+            "S2-premier-2026-10-24#1",
+            0.7838
+          ],
+          [
+            "S1-worlds-2026#4",
+            0.7811
+          ],
+          [
+            "S5-premier-2026-11-21#1",
+            0.7705
+          ],
+          [
+            "S4-worlds-2026-decklist#1",
+            0.7619
+          ],
+          [
+            "S2-premier-2026-10-24#2",
+            0.7287
+          ]
+        ],
+        "evidence": [
+          {
+            "id": "S1-worlds-2026#placement-worlds-1st",
+            "kind": "fact",
+            "source_id": "S1-worlds-2026",
+            "status": "externally_verified",
+            "text": "1st at 2026 Elestrals World Championship (2026-03-21): Celestleo. Note: Won by Mike Thomas (Trishula) with a Celestleo decklist.",
+            "scores": {}
+          },
+          {
+            "id": "S1-worlds-2026#1",
+            "kind": "chunk",
+            "source_id": "S1-worlds-2026",
+            "status": "externally_verified",
+            "text": "The first Elestrals World Championship took place in 2026, and Elestrals published the results on March 27, 2026. Mike Thomas, who plays under the name Trishula, won and became the first Elestrals World Champion. He won with a Celestleo deck.",
+            "scores": {
+              "rrf": 0.0325,
+              "keyword_bm25": 9.996,
+              "vector_cosine": 0.85
+            }
+          },
+          {
+            "id": "S1-worlds-2026#2",
+            "kind": "chunk",
+            "source_id": "S1-worlds-2026",
+            "status": "externally_verified",
+            "text": "Celestleo's Pride was the leading archetype at the event. It builds around the Solar Elestral Celestleo and uses the Foretell mechanic to find the cards it needs. Fish Nexus was the other heavily represented archetype. It is a Water deck in which Apheros and Magneros work together to fill the board.",
+            "scores": {
+              "rrf": 0.032,
+              "keyword_bm25": 4.498,
+              "vector_cosine": 0.88
+            }
+          },
+          {
+            "id": "S1-worlds-2026#3",
+            "kind": "chunk",
+            "source_id": "S1-worlds-2026",
+            "status": "externally_verified",
+            "text": "Because Celestleo's Pride and Fish Nexus led the field, Solar and Water were the elements most featured among the top Elestrals at Worlds. Even so, the single most represented Elestral was Cyanectar, Champion of Dionysus, because it can search out key Runes such as Poison Tipped Arrow.",
+            "scores": {
+              "rrf": 0.0317,
+              "keyword_bm25": 4.603,
+              "vector_cosine": 0.842
+            }
+          },
+          {
+            "id": "S1-worlds-2026#4",
+            "kind": "chunk",
+            "source_id": "S1-worlds-2026",
+            "status": "externally_verified",
+            "text": "The event closed the 2026 season. The results article says the 2027 season starts with online Premier events.",
+            "scores": {
+              "rrf": 0.0315,
+              "keyword_bm25": 5.277,
+              "vector_cosine": 0.781
+            }
+          }
+        ],
+        "commit": "753f69110f79aaaefe3308f8fb4f8954f39b3540"
+      },
+      "passed": true,
+      "problems": []
+    },
+    {
+      "item": {
+        "id": "Q2",
+        "question": "Which deck did the first world champ play?",
+        "tests": "paraphrase",
+        "expect_status": "answered",
+        "expect_sources": [
+          "S1-worlds-2026"
+        ],
+        "expect_terms": [
+          "Celestleo"
+        ]
+      },
+      "response": {
+        "question": "Which deck did the first world champ play?",
+        "answer": "The first Elestrals World Champion, Mike Thomas (who plays under the name Trishula), won with a Celestleo deck [S1-worlds-2026#1].",
+        "status": "answered",
+        "citations": [
+          "S1-worlds-2026#1"
+        ],
+        "removed_citations": [],
+        "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
+        "model": "gemini-3.5-flash-lite",
+        "warnings": [],
+        "retrieval_mode": "hybrid",
+        "keyword_hits": [
+          [
+            "S1-worlds-2026#1",
+            5.9982865919822945
+          ],
+          [
+            "S4-worlds-2026-decklist#1",
+            3.659472268153144
+          ],
+          [
+            "S1-worlds-2026#4",
+            1.9444052455853666
+          ],
+          [
+            "S1-worlds-2026#3",
+            1.560656636710448
+          ],
+          [
+            "S1-worlds-2026#2",
+            1.5416415567966613
+          ],
+          [
+            "S2-premier-2026-10-24#2",
+            1.7488580815770496e-06
+          ],
+          [
+            "S5-premier-2026-11-21#3",
+            1.7446115413439922e-06
+          ],
+          [
+            "S2-premier-2026-10-24#3",
+            1.7382802582649255e-06
+          ]
+        ],
+        "vector_hits": [
+          [
+            "S4-worlds-2026-decklist#1",
+            0.768
+          ],
+          [
+            "S1-worlds-2026#1",
+            0.7507
+          ],
+          [
+            "S5-premier-2026-11-21#4",
+            0.741
+          ],
+          [
+            "S2-premier-2026-10-24#4",
+            0.732
+          ],
+          [
+            "S1-worlds-2026#3",
+            0.7212
+          ],
+          [
+            "S1-worlds-2026#2",
+            0.721
+          ],
+          [
+            "S2-premier-2026-10-24#2",
+            0.7064
+          ],
+          [
+            "S2-premier-2026-10-24#3",
+            0.7014
+          ]
+        ],
+        "evidence": [
+          {
+            "id": "S1-worlds-2026#1",
+            "kind": "chunk",
+            "source_id": "S1-worlds-2026",
+            "status": "externally_verified",
+            "text": "The first Elestrals World Championship took place in 2026, and Elestrals published the results on March 27, 2026. Mike Thomas, who plays under the name Trishula, won and became the first Elestrals World Champion. He won with a Celestleo deck.",
+            "scores": {
+              "rrf": 0.0325,
+              "keyword_bm25": 5.998,
+              "vector_cosine": 0.751
+            }
+          },
+          {
+            "id": "S4-worlds-2026-decklist#1",
+            "kind": "chunk",
+            "source_id": "S4-worlds-2026-decklist",
+            "status": "externally_verified",
+            "text": "The main deck ran 3 Nebuleo; 1 Celestleo; 2 Glimbatt - Champion of Apollo; 3 Novacore - Champion of Apollo; 3 Lumaroo; 3 Exaltus; 1 Plucky; 1 Earthquake; 3 Apollo; 1 Lyre of Apollo; 2 Temple of the Sun; 2 First Light; 1 Solar Burst; 3 Guardian of Light; 1 Necklace of Harmonia; 2 Altar of Stars; 3 Argo; 3 Gorgon's Gaze; 2 Shield of Achilles.",
+            "scores": {
+              "rrf": 0.0325,
+              "keyword_bm25": 3.659,
+              "vector_cosine": 0.768
+            }
+          },
+          {
+            "id": "S1-worlds-2026#3",
+            "kind": "chunk",
+            "source_id": "S1-worlds-2026",
+            "status": "externally_verified",
+            "text": "Because Celestleo's Pride and Fish Nexus led the field, Solar and Water were the elements most featured among the top Elestrals at Worlds. Even so, the single most represented Elestral was Cyanectar, Champion of Dionysus, because it can search out key Runes such as Poison Tipped Arrow.",
+            "scores": {
+              "rrf": 0.031,
+              "keyword_bm25": 1.561,
+              "vector_cosine": 0.721
+            }
+          },
+          {
+            "id": "S1-worlds-2026#2",
+            "kind": "chunk",
+            "source_id": "S1-worlds-2026",
+            "status": "externally_verified",
+            "text": "Celestleo's Pride was the leading archetype at the event. It builds around the Solar Elestral Celestleo and uses the Foretell mechanic to find the cards it needs. Fish Nexus was the other heavily represented archetype. It is a Water deck in which Apheros and Magneros work together to fill the board.",
+            "scores": {
+              "rrf": 0.0305,
+              "keyword_bm25": 1.542,
+              "vector_cosine": 0.721
+            }
+          }
+        ],
+        "commit": "753f69110f79aaaefe3308f8fb4f8954f39b3540"
+      },
+      "passed": true,
+      "problems": []
+    },
+    {
+      "item": {
+        "id": "Q3",
+        "question": "Which elements were most featured among the top Elestrals at Worlds?",
+        "tests": "aggregate over a stated set",
+        "expect_status": "answered",
+        "expect_sources": [
+          "S1-worlds-2026"
+        ],
+        "expect_terms": [
+          "Solar",
+          "Water"
+        ]
+      },
+      "response": {
+        "question": "Which elements were most featured among the top Elestrals at Worlds?",
+        "answer": "Solar and Water were the elements most featured among the top Elestrals at Worlds, because Celestleo's Pride and Fish Nexus led the field [S1-worlds-2026#3].",
+        "status": "answered",
+        "citations": [
+          "S1-worlds-2026#3"
+        ],
+        "removed_citations": [],
+        "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
+        "model": "gemini-3.5-flash-lite",
+        "warnings": [],
+        "retrieval_mode": "hybrid",
+        "keyword_hits": [
+          [
+            "S1-worlds-2026#3",
+            15.263672041882764
+          ],
+          [
+            "S5-premier-2026-11-21#3",
+            4.661689987927739
+          ],
+          [
+            "S2-premier-2026-10-24#3",
+            4.634594258132222
+          ],
+          [
+            "S2-premier-2026-10-24#2",
+            4.612889130163476
+          ],
+          [
+            "S5-premier-2026-11-21#2",
+            4.521558931634159
+          ],
+          [
+            "S3-note-01#1",
+            2.2385505820981058
+          ],
+          [
+            "S1-worlds-2026#1",
+            1.8240160582584541
+          ],
+          [
+            "S2-premier-2026-10-24#1",
+            1.8029904146005007
+          ]
+        ],
+        "vector_hits": [
+          [
+            "S1-worlds-2026#3",
+            0.853
+          ],
+          [
+            "S1-worlds-2026#2",
+            0.812
+          ],
+          [
+            "S2-premier-2026-10-24#3",
+            0.7655
+          ],
+          [
+            "S2-premier-2026-10-24#2",
+            0.7654
+          ],
+          [
+            "S5-premier-2026-11-21#2",
+            0.7618
+          ],
+          [
+            "S5-premier-2026-11-21#3",
+            0.7579
+          ],
+          [
+            "S1-worlds-2026#1",
+            0.7552
+          ],
+          [
+            "S1-worlds-2026#4",
+            0.7195
+          ]
+        ],
+        "evidence": [
+          {
+            "id": "S1-worlds-2026#3",
+            "kind": "chunk",
+            "source_id": "S1-worlds-2026",
+            "status": "externally_verified",
+            "text": "Because Celestleo's Pride and Fish Nexus led the field, Solar and Water were the elements most featured among the top Elestrals at Worlds. Even so, the single most represented Elestral was Cyanectar, Champion of Dionysus, because it can search out key Runes such as Poison Tipped Arrow.",
+            "scores": {
+              "rrf": 0.0328,
+              "keyword_bm25": 15.264,
+              "vector_cosine": 0.853
+            }
+          },
+          {
+            "id": "S2-premier-2026-10-24#3",
+            "kind": "chunk",
+            "source_id": "S2-premier-2026-10-24",
+            "status": "externally_verified",
+            "text": "The Top 8 deck's main-deck elements were Earth 17, Water 1, Frost 1, Lunar 1; featured cards included Midas' Touch, Duggabyss, Demeter, Clovie - Champion of Demeter, Foloi Forest, Equilynx - Champion of Demeter. The Top 8 deck's main-deck elements were Frost 13, Earth 5, Fire 2; featured cards included Eternal Winter, Chillalotl - Champion of Khione, Blizzard - Whiteout, Kryoscorch - Champion of Hades, Kryoling - Champion of Hades, Khione. The Top 8 deck's main-deck elements were Frost 11, Earth 4, Fire 3, Water 2; featured cards included Eternal Winter, House of Hades, Frosmite - Champion of Hades, Kryoling, Cryoblast, Polzer - Champion of Hades. The Top 8 deck's main-deck elements were Frost 9, Fire 7, Earth 4; featured cards included Polzer - Champion of Hades, Khione, Kryoling - Champion of Hades, Eternal Winter, Cryoblast, Hades.",
+            "scores": {
+              "rrf": 0.0317,
+              "keyword_bm25": 4.635,
+              "vector_cosine": 0.766
+            }
+          },
+          {
+            "id": "S5-premier-2026-11-21#3",
+            "kind": "chunk",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "The Top 8 deck's main-deck elements were Earth 15, Lunar 2, Water 2, Frost 1; featured cards included Gigafflora - Champion of Demeter, Dionysus, Equilynx - Champion of Demeter, Equilynx, Demeter, Mosstacean - Champion of Demeter. The Top 8 deck's main-deck elements were Earth 13, Frost 5, Fire 2; featured cards included Equilynx, Cyanectar - Champion of Dionysus, Demeter, Dionysus' Madness, Sproutyr - Champion of Dionysus, Cyprong - Champion of Dionysus. The Top 8 deck's main-deck elements were Earth 18, Water 2; featured cards included Vysceris, Satymber - Champion of Dionysus, Foloi Forest, Dionysus' Madness, Equilynx, Sproutyr - Champion of Dionysus. The Top 8 deck's main-deck elements were Lunar 17, Water 2, Frost 1; featured cards included Rise from the Shadows, Specteris, Lunar Phase - Full Moon, Gloombatt, Doppelgator, Gloombatt - Champion of Athena.",
+            "scores": {
+              "rrf": 0.0313,
+              "keyword_bm25": 4.662,
+              "vector_cosine": 0.758
+            }
+          },
+          {
+            "id": "S2-premier-2026-10-24#2",
+            "kind": "chunk",
+            "source_id": "S2-premier-2026-10-24",
+            "status": "externally_verified",
+            "text": "The 1st deck's main-deck elements were Fire 16, Wind 3, Water 1; featured cards included Hestia's Hearth, Eruption - Hephaestus' Jealousy, Rummacoal, Ashrabbit - Champion of Hestia, Majursa - Champion of Hestia, Kindleo. The 2nd deck's main-deck elements were Lunar 17, Frost 2, Water 1; featured cards included Lunar Phase - Lunar Eclipse, Temple of the Moon, Werepup, Doppelgator, Gloombatt, Auraboros. The Top 4 deck's main-deck elements were Fire 12, Frost 8; featured cards included Volcanic Forge, Hades, Frosmite - Champion of Hades, Trifernal - Champion of Hades, Blazerus - Champion of Hades, Eruption - Hephaestus' Jealousy. The Top 4 deck's main-deck elements were Frost 14, Earth 4, Fire 2; featured cards included Polzer - Champion of Hades, Kryoling, Frosmite - Champion of Hades, Kryoling - Champion of Hades, Eternal Winter, Hades.",
+            "scores": {
+              "rrf": 0.0312,
+              "keyword_bm25": 4.613,
+              "vector_cosine": 0.765
+            }
+          }
+        ],
+        "commit": "753f69110f79aaaefe3308f8fb4f8954f39b3540"
+      },
+      "passed": true,
+      "problems": []
+    },
+    {
+      "item": {
+        "id": "Q4",
+        "question": "How many copies of Gorgon's Gaze were in the October 24 Premier winning deck?",
+        "tests": "exact count (structured)",
+        "expect_status": "answered",
+        "expect_sources": [
+          "S2-premier-2026-10-24"
+        ],
+        "expect_terms": [
+          "3"
+        ]
+      },
+      "response": {
+        "question": "How many copies of Gorgon's Gaze were in the October 24 Premier winning deck?",
+        "answer": "There were 3 copies of Gorgon's Gaze in the main deck of the 1st-place winner at the October 24, 2026 Premier Webcam Tournament [S2-premier-2026-10-24#deck-d-premier-2026-10-24-1; S2-premier-2026-10-24#4]. Player names are not stored.",
+        "status": "answered",
+        "citations": [
+          "S2-premier-2026-10-24#deck-d-premier-2026-10-24-1",
+          "S2-premier-2026-10-24#4"
+        ],
+        "removed_citations": [],
+        "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
+        "model": "gemini-3.5-flash-lite",
+        "warnings": [],
+        "retrieval_mode": "hybrid",
+        "keyword_hits": [
+          [
+            "S2-premier-2026-10-24#1",
+            7.217762615856708
+          ],
+          [
+            "S2-premier-2026-10-24#4",
+            6.702917407590788
+          ],
+          [
+            "S5-premier-2026-11-21#4",
+            3.690839997388538
+          ],
+          [
+            "S4-worlds-2026-decklist#1",
+            3.4564562398384826
+          ],
+          [
+            "S3-note-01#1",
+            3.3035441533640135
+          ],
+          [
+            "S2-premier-2026-10-24#2",
+            3.107507046107598
+          ],
+          [
+            "S2-premier-2026-10-24#3",
+            3.0466089736875164
+          ],
+          [
+            "S3-note-03#2",
+            2.961489519686875
+          ]
+        ],
+        "vector_hits": [
+          [
+            "S2-premier-2026-10-24#4",
+            0.7815
+          ],
+          [
+            "S5-premier-2026-11-21#4",
+            0.7567
+          ],
+          [
+            "S2-premier-2026-10-24#3",
+            0.7377
+          ],
+          [
+            "S2-premier-2026-10-24#2",
+            0.7273
+          ],
+          [
+            "S3-note-03#2",
+            0.704
+          ],
+          [
+            "S5-premier-2026-11-21#3",
+            0.7014
+          ],
+          [
+            "S4-worlds-2026-decklist#1",
+            0.6955
+          ],
+          [
+            "S5-premier-2026-11-21#2",
+            0.6896
+          ]
+        ],
+        "evidence": [
+          {
+            "id": "S2-premier-2026-10-24#deck-d-premier-2026-10-24-1",
+            "kind": "fact",
+            "source_id": "S2-premier-2026-10-24",
+            "status": "externally_verified",
+            "text": "The 1st-place deck at October 24, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-10-24) ran Gorgon's Gaze: 3 in the main deck.",
+            "scores": {}
+          },
+          {
+            "id": "S2-premier-2026-10-24#placement-p1",
+            "kind": "fact",
+            "source_id": "S2-premier-2026-10-24",
+            "status": "externally_verified",
+            "text": "1st at October 24, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-10-24): Fire 16, Wind 3, Water 1 deck.",
+            "scores": {}
+          },
+          {
+            "id": "S2-premier-2026-10-24#4",
+            "kind": "chunk",
+            "source_id": "S2-premier-2026-10-24",
+            "status": "externally_verified",
+            "text": "The main deck ran 3 Hestia's Hearth; 1 Eruption - Hephaestus' Jealousy; 3 Kitemite - Champion of Hestia; 2 Rummacoal; 3 Ashrabbit - Champion of Hestia; 1 Majursa - Champion of Hestia; 2 Parachne - Champion of Hestia; 1 Kindleo; 3 Hestia; 3 Poison Tipped Arrow; 1 Hestia's Hearth - Eternal Flame; 3 Gorgon's Gaze; 2 Urscout - Champion of Hestia; 3 Warmite - Champion of Hestia; 2 Volcanic Forge; 2 Resting on Your Laurels; 2 Volcaries; 3 Ursmog - Champion of Hestia.",
+            "scores": {
+              "rrf": 0.0325,
+              "keyword_bm25": 6.703,
+              "vector_cosine": 0.781
+            }
+          },
+          {
+            "id": "S5-premier-2026-11-21#4",
+            "kind": "chunk",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "The main deck ran 2 Poison Tipped Arrow; 2 Dense Fog; 1 Avialith - Champion of Hermes; 2 Tsunami; 2 Carryoff - Champion of Hermes; 2 Carryon - Champion of Hermes; 3 Spinosect - Champion of Hermes; 3 Spinymph - Champion of Hermes; 2 Galaxea - Champion of Poseidon; 3 Hermes' Trickery; 3 Hermes; 2 Galaxea; 2 Cyanectar - Champion of Dionysus; 1 Fowlicane; 3 Gorgon's Gaze; 1 Cyclovenom - Champion of Hermes; 2 Peliquarius; 3 Shield of Achilles; 1 Toxiswarm - Champion of Hermes.",
+            "scores": {
+              "rrf": 0.032,
+              "keyword_bm25": 3.691,
+              "vector_cosine": 0.757
+            }
+          },
+          {
+            "id": "S2-premier-2026-10-24#3",
+            "kind": "chunk",
+            "source_id": "S2-premier-2026-10-24",
+            "status": "externally_verified",
+            "text": "The Top 8 deck's main-deck elements were Earth 17, Water 1, Frost 1, Lunar 1; featured cards included Midas' Touch, Duggabyss, Demeter, Clovie - Champion of Demeter, Foloi Forest, Equilynx - Champion of Demeter. The Top 8 deck's main-deck elements were Frost 13, Earth 5, Fire 2; featured cards included Eternal Winter, Chillalotl - Champion of Khione, Blizzard - Whiteout, Kryoscorch - Champion of Hades, Kryoling - Champion of Hades, Khione. The Top 8 deck's main-deck elements were Frost 11, Earth 4, Fire 3, Water 2; featured cards included Eternal Winter, House of Hades, Frosmite - Champion of Hades, Kryoling, Cryoblast, Polzer - Champion of Hades. The Top 8 deck's main-deck elements were Frost 9, Fire 7, Earth 4; featured cards included Polzer - Champion of Hades, Khione, Kryoling - Champion of Hades, Eternal Winter, Cryoblast, Hades.",
+            "scores": {
+              "rrf": 0.0308,
+              "keyword_bm25": 3.047,
+              "vector_cosine": 0.738
+            }
+          },
+          {
+            "id": "S2-premier-2026-10-24#2",
+            "kind": "chunk",
+            "source_id": "S2-premier-2026-10-24",
+            "status": "externally_verified",
+            "text": "The 1st deck's main-deck elements were Fire 16, Wind 3, Water 1; featured cards included Hestia's Hearth, Eruption - Hephaestus' Jealousy, Rummacoal, Ashrabbit - Champion of Hestia, Majursa - Champion of Hestia, Kindleo. The 2nd deck's main-deck elements were Lunar 17, Frost 2, Water 1; featured cards included Lunar Phase - Lunar Eclipse, Temple of the Moon, Werepup, Doppelgator, Gloombatt, Auraboros. The Top 4 deck's main-deck elements were Fire 12, Frost 8; featured cards included Volcanic Forge, Hades, Frosmite - Champion of Hades, Trifernal - Champion of Hades, Blazerus - Champion of Hades, Eruption - Hephaestus' Jealousy. The Top 4 deck's main-deck elements were Frost 14, Earth 4, Fire 2; featured cards included Polzer - Champion of Hades, Kryoling, Frosmite - Champion of Hades, Kryoling - Champion of Hades, Eternal Winter, Hades.",
+            "scores": {
+              "rrf": 0.0308,
+              "keyword_bm25": 3.108,
+              "vector_cosine": 0.727
+            }
+          }
+        ],
+        "commit": "753f69110f79aaaefe3308f8fb4f8954f39b3540"
+      },
+      "passed": true,
+      "problems": []
+    },
+    {
+      "item": {
+        "id": "Q5",
+        "question": "What is the ban list for the 2027 season?",
+        "tests": "deliberately absent",
+        "expect_status": "insufficient",
+        "expect_sources": [],
+        "expect_terms": []
+      },
+      "response": {
+        "question": "What is the ban list for the 2027 season?",
+        "answer": "I don't have a source for that in my imported data.",
+        "status": "insufficient",
+        "citations": [],
+        "removed_citations": [],
+        "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
+        "model": "gemini-3.5-flash-lite",
+        "warnings": [],
+        "retrieval_mode": "hybrid",
+        "keyword_hits": [
+          [
+            "S1-worlds-2026#4",
+            9.237148838726656
+          ],
+          [
+            "S3-note-03#2",
+            1.8685551829237612
+          ],
+          [
+            "S3-note-03#5",
+            1.828282862229498
+          ],
+          [
+            "S3-note-03#4",
+            1.4402855579307943
+          ],
+          [
+            "S3-note-03#6",
+            1.17287051790466
+          ]
+        ],
+        "vector_hits": [
+          [
+            "S1-worlds-2026#4",
+            0.6981
+          ],
+          [
+            "S4-worlds-2026-decklist#1",
+            0.6693
+          ],
+          [
+            "S5-premier-2026-11-21#4",
+            0.6679
+          ],
+          [
+            "S3-note-01#1",
+            0.6655
+          ],
+          [
+            "S3-note-02#1",
+            0.6646
+          ],
+          [
+            "S2-premier-2026-10-24#4",
+            0.6601
+          ],
+          [
+            "S5-premier-2026-11-21#3",
+            0.6552
+          ],
+          [
+            "S3-note-03#1",
+            0.6551
+          ]
+        ],
+        "evidence": [
+          {
+            "id": "S1-worlds-2026#4",
+            "kind": "chunk",
+            "source_id": "S1-worlds-2026",
+            "status": "externally_verified",
+            "text": "The event closed the 2026 season. The results article says the 2027 season starts with online Premier events.",
+            "scores": {
+              "rrf": 0.0328,
+              "keyword_bm25": 9.237,
+              "vector_cosine": 0.698
+            }
+          },
+          {
+            "id": "S3-note-03#2",
+            "kind": "chunk",
+            "source_id": "S3-note-03",
+            "status": "author_knowledge",
+            "text": "- Hermes Toolbox: a Hermes deck that uses the core Hermes cards to adapt to each matchup. The November 21 winning list adds Galaxea to answer Apheros, which is common in the current meta. - Hephestia: a deck that combines the Hephaestus and Hestia cores. - Hades Trifernal/Sloth: a Hades deck named for its two bosses, Trifernal (Champion of Hades) and Neandersloth (Champion of Khione). - Dio Duggy: pairs Dionysus with the Duggy and Duggabyss line. - Dem Dio: runs several copies of both Demeter and Dionysus, but leans on Demeter. - Dem Dio Hades: a Dem Dio list that adds Hades and Neandersloth. - Lunar Aggro: a Lunar deck with no bosses and a lot of removal.",
+            "scores": {
+              "rrf": 0.0161,
+              "keyword_bm25": 1.869
+            }
+          },
+          {
+            "id": "S4-worlds-2026-decklist#1",
+            "kind": "chunk",
+            "source_id": "S4-worlds-2026-decklist",
+            "status": "externally_verified",
+            "text": "The main deck ran 3 Nebuleo; 1 Celestleo; 2 Glimbatt - Champion of Apollo; 3 Novacore - Champion of Apollo; 3 Lumaroo; 3 Exaltus; 1 Plucky; 1 Earthquake; 3 Apollo; 1 Lyre of Apollo; 2 Temple of the Sun; 2 First Light; 1 Solar Burst; 3 Guardian of Light; 1 Necklace of Harmonia; 2 Altar of Stars; 3 Argo; 3 Gorgon's Gaze; 2 Shield of Achilles.",
+            "scores": {
+              "rrf": 0.0161,
+              "vector_cosine": 0.669
+            }
+          },
+          {
+            "id": "S3-note-03#5",
+            "kind": "chunk",
+            "source_id": "S3-note-03",
+            "status": "author_knowledge",
+            "text": "Main deck (40): Ursmog - Champion of Hestia x3, Ashrabbit - Champion of Hestia x2, Urscout - Champion of Hestia x2, Kindleo x1, Warmite - Champion of Hestia x3, Majursa - Champion of Hestia x1, Kitemite - Champion of Hestia x2, Parachne - Champion of Hestia x2, Ursicle x2, Frosmite - Champion of Hades x2, Hibearnation x3, Eruption - Hephaestus' Jealousy x1, Hestia's Hearth x3, Poison Tipped Arrow x2, Shield of Achilles x2, Gorgon's Gaze x3, Hestia x3, Volcanic Forge x1, Ursa Den x1, Hestia's Hearth - Eternal Flame x1.\nSpirit deck (20): Vipyro x14 (Fire), 3 Frost (Flurrmine), 2 Wind (Lycarus), 1 Earth (Teratlas).\nSide deck: not recorded. The side deck in Peter's image was a temporary test, not a real side deck for this list.",
+            "scores": {
+              "rrf": 0.0159,
+              "keyword_bm25": 1.828
+            }
+          }
+        ],
+        "commit": "753f69110f79aaaefe3308f8fb4f8954f39b3540"
+      },
+      "passed": true,
+      "problems": []
+    },
+    {
+      "item": {
+        "id": "Q6",
+        "question": "Which deck won the Columbus Open?",
+        "tests": "fact from author's note",
+        "expect_status": "answered",
+        "expect_sources": [
+          "S3-note-01"
+        ],
+        "expect_terms": [
+          "Fish"
+        ]
+      },
+      "response": {
+        "question": "Which deck won the Columbus Open?",
+        "answer": "According to the author's notes, the Fish deck won the Columbus Open [S3-note-01#placement-columbus-1st; S3-note-01#2]. Player names are not stored.",
+        "status": "answered",
+        "citations": [
+          "S3-note-01#placement-columbus-1st",
+          "S3-note-01#2"
+        ],
+        "removed_citations": [],
+        "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
+        "model": "gemini-3.5-flash-lite",
+        "warnings": [],
+        "retrieval_mode": "hybrid",
+        "keyword_hits": [
+          [
+            "S3-note-01#1",
+            4.994412389177899
+          ],
+          [
+            "S3-note-01#2",
+            4.393969619529787
+          ],
+          [
+            "S3-note-02#1",
+            4.329890832220216
+          ],
+          [
+            "S1-worlds-2026#1",
+            3.583984048247101
+          ],
+          [
+            "S3-note-01#3",
+            3.35215769752939
+          ],
+          [
+            "S3-note-03#4",
+            2.0236289799414626
+          ],
+          [
+            "S2-premier-2026-10-24#2",
+            1.7488580815770496e-06
+          ],
+          [
+            "S5-premier-2026-11-21#3",
+            1.7446115413439922e-06
+          ]
+        ],
+        "vector_hits": [
+          [
+            "S3-note-01#2",
+            0.8205
+          ],
+          [
+            "S3-note-01#1",
+            0.7876
+          ],
+          [
+            "S3-note-01#3",
+            0.7516
+          ],
+          [
+            "S3-note-02#1",
+            0.7287
+          ],
+          [
+            "S5-premier-2026-11-21#4",
+            0.7173
+          ],
+          [
+            "S2-premier-2026-10-24#4",
+            0.7118
+          ],
+          [
+            "S4-worlds-2026-decklist#1",
+            0.7092
+          ],
+          [
+            "S2-premier-2026-10-24#3",
+            0.7055
+          ]
+        ],
+        "evidence": [
+          {
+            "id": "S3-note-01#placement-columbus-1st",
+            "kind": "fact",
+            "source_id": "S3-note-01",
+            "status": "author_knowledge",
+            "text": "1st at Columbus Open (2026-11-07 to 2026-11-08): Fish. Note: Winner played Fish (Peter's notes; official results not yet posted on TopElestrals as of 2026-11-19).",
+            "scores": {}
+          },
+          {
+            "id": "S3-note-01#1",
+            "kind": "chunk",
+            "source_id": "S3-note-01",
+            "status": "author_knowledge",
+            "text": "The current meta is very diverse, with many strong decks being played, but at the last event, the Columbus Open, the majority of the decks played were Athena Dimenshen, Apollo Celestleo, Hades Trifernal, Fish, Hades Sloth, and Sulfury in that order.",
+            "scores": {
+              "rrf": 0.0325,
+              "keyword_bm25": 4.994,
+              "vector_cosine": 0.788
+            }
+          },
+          {
+            "id": "S3-note-01#2",
+            "kind": "chunk",
+            "source_id": "S3-note-01",
+            "status": "author_knowledge",
+            "text": "The main topping decks were Hades Sloth, Fish, Dionysus Duggy, and a few scattered other decks, with the winner playing Fish.",
+            "scores": {
+              "rrf": 0.0325,
+              "keyword_bm25": 4.394,
+              "vector_cosine": 0.821
+            }
+          },
+          {
+            "id": "S3-note-02#1",
+            "kind": "chunk",
+            "source_id": "S3-note-02",
+            "status": "author_knowledge",
+            "text": "Around the Columbus Open (November 7 to 8, 2026), these are the bosses each archetype plays. A slash means the deck plays any of those bosses.",
+            "scores": {
+              "rrf": 0.0315,
+              "keyword_bm25": 4.33,
+              "vector_cosine": 0.729
+            }
+          },
+          {
+            "id": "S3-note-01#3",
+            "kind": "chunk",
+            "source_id": "S3-note-01",
+            "status": "author_knowledge",
+            "text": "Overall, the meta is less defined by the decks that are played, but rather by the bosses that each deck played. Celestleo, Dimenshen, Neandersloth, and Fish (as a whole) are all very difficult bosses to beat, and if any deck is able to have one of them stay on the board, the tempo of the game sways completely in their favor.",
+            "scores": {
+              "rrf": 0.0313,
+              "keyword_bm25": 3.352,
+              "vector_cosine": 0.752
+            }
+          }
+        ],
+        "commit": "753f69110f79aaaefe3308f8fb4f8954f39b3540"
+      },
+      "passed": true,
+      "problems": []
+    },
+    {
+      "item": {
+        "id": "Q7",
+        "question": "Which bosses are hardest to beat right now?",
+        "tests": "paraphrase + opinion attribution",
+        "expect_status": "answered",
+        "expect_sources": [
+          "S3-note-01"
+        ],
+        "expect_terms": [
+          "Celestleo",
+          "Neandersloth"
+        ]
+      },
+      "response": {
+        "question": "Which bosses are hardest to beat right now?",
+        "answer": "According to the author's notes, the bosses that are very difficult to beat are Celestleo, Dimenshen, Neandersloth, and Fish (as a whole) [S3-note-01#3]. If any deck is able to keep one of them on the board, the tempo of the game sways completely in their favor [S3-note-01#3].",
+        "status": "answered",
+        "citations": [
+          "S3-note-01#3"
+        ],
+        "removed_citations": [],
+        "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
+        "model": "gemini-3.5-flash-lite",
+        "warnings": [],
+        "retrieval_mode": "hybrid",
+        "keyword_hits": [
+          [
+            "S3-note-01#3",
+            4.503531337284447
+          ],
+          [
+            "S3-note-02#1",
+            1.8035347602136989
+          ],
+          [
+            "S3-note-02#3",
+            1.454916740363335
+          ],
+          [
+            "S3-note-02#5",
+            1.454916740363335
+          ],
+          [
+            "S3-note-02#2",
+            1.4432904202637495
+          ],
+          [
+            "S3-note-02#4",
+            1.4095002373241816
+          ],
+          [
+            "S3-note-03#2",
+            1.1366972725337434
+          ]
+        ],
+        "vector_hits": [
+          [
+            "S3-note-01#3",
+            0.7598
+          ],
+          [
+            "S3-note-02#1",
+            0.7094
+          ],
+          [
+            "S3-note-02#2",
+            0.694
+          ],
+          [
+            "S3-note-02#3",
+            0.6885
+          ],
+          [
+            "S3-note-02#4",
+            0.6883
+          ],
+          [
+            "S3-note-02#5",
+            0.682
+          ],
+          [
+            "S3-note-01#1",
+            0.6563
+          ],
+          [
+            "S3-note-01#2",
+            0.6236
+          ]
+        ],
+        "evidence": [
+          {
+            "id": "S3-note-01#3",
+            "kind": "chunk",
+            "source_id": "S3-note-01",
+            "status": "author_knowledge",
+            "text": "Overall, the meta is less defined by the decks that are played, but rather by the bosses that each deck played. Celestleo, Dimenshen, Neandersloth, and Fish (as a whole) are all very difficult bosses to beat, and if any deck is able to have one of them stay on the board, the tempo of the game sways completely in their favor.",
+            "scores": {
+              "rrf": 0.0328,
+              "keyword_bm25": 4.504,
+              "vector_cosine": 0.76
+            }
+          },
+          {
+            "id": "S3-note-02#1",
+            "kind": "chunk",
+            "source_id": "S3-note-02",
+            "status": "author_knowledge",
+            "text": "Around the Columbus Open (November 7 to 8, 2026), these are the bosses each archetype plays. A slash means the deck plays any of those bosses.",
+            "scores": {
+              "rrf": 0.0323,
+              "keyword_bm25": 1.804,
+              "vector_cosine": 0.709
+            }
+          },
+          {
+            "id": "S3-note-02#3",
+            "kind": "chunk",
+            "source_id": "S3-note-02",
+            "status": "author_knowledge",
+            "text": "Apollo Celestleo plays Celestleo. Athena Dimenshen plays Dimenshen CoAthena.",
+            "scores": {
+              "rrf": 0.0315,
+              "keyword_bm25": 1.455,
+              "vector_cosine": 0.689
+            }
+          },
+          {
+            "id": "S3-note-02#2",
+            "kind": "chunk",
+            "source_id": "S3-note-02",
+            "status": "author_knowledge",
+            "text": "Hades Sloth plays Neandersloth CoKhione. Hades Trifernal plays Trifernal CoHades or Sulfury.",
+            "scores": {
+              "rrf": 0.0313,
+              "keyword_bm25": 1.443,
+              "vector_cosine": 0.694
+            }
+          }
+        ],
+        "commit": "753f69110f79aaaefe3308f8fb4f8954f39b3540"
+      },
+      "passed": true,
+      "problems": []
+    },
+    {
+      "item": {
+        "id": "Q8",
+        "question": "Which decks run Neandersloth CoKhione?",
+        "tests": "relationship (one boss, two archetypes)",
+        "expect_status": "answered",
+        "expect_sources": [
+          "S3-note-02"
+        ],
+        "expect_terms": [
+          "Hades Sloth",
+          "Dio Duggy"
+        ]
+      },
+      "response": {
+        "question": "Which decks run Neandersloth CoKhione?",
+        "answer": "According to the author's notes, Neandersloth CoKhione is played by four archetypes: Dem Dio Hades, Dio Duggy, Hades Sloth, and Hades Trifernal/Sloth [S3-note-02#boss-neandersloth-cokhione]. Specifically, the Dionysus deck Dio Duggy (Dionysus Duggy) plays Neandersloth CoKhione, and the Hades deck Hades Sloth also plays Neandersloth CoKhione [S3-note-02#5; S3-note-02#2].",
+        "status": "answered",
+        "citations": [
+          "S3-note-02#boss-neandersloth-cokhione",
+          "S3-note-02#5",
+          "S3-note-02#2"
+        ],
+        "removed_citations": [],
+        "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
+        "model": "gemini-3.5-flash-lite",
+        "warnings": [],
+        "retrieval_mode": "hybrid",
+        "keyword_hits": [
+          [
+            "S3-note-02#5",
+            7.206901205758054
+          ],
+          [
+            "S3-note-02#2",
+            7.1493104598276
+          ],
+          [
+            "S3-note-01#3",
+            2.6956859695125956
+          ],
+          [
+            "S3-note-03#2",
+            1.8685551829237612
+          ],
+          [
+            "S3-note-01#1",
+            1.6962595033547332
+          ],
+          [
+            "S3-note-01#2",
+            1.6662813792896738
+          ],
+          [
+            "S3-note-02#3",
+            1.454916740363335
+          ],
+          [
+            "S3-note-02#4",
+            1.4095002373241816
+          ]
+        ],
+        "vector_hits": [
+          [
+            "S3-note-02#5",
+            0.7542
+          ],
+          [
+            "S3-note-02#2",
+            0.75
+          ],
+          [
+            "S3-note-01#1",
+            0.7268
+          ],
+          [
+            "S3-note-01#2",
+            0.7244
+          ],
+          [
+            "S3-note-01#3",
+            0.7158
+          ],
+          [
+            "S3-note-03#2",
+            0.6954
+          ],
+          [
+            "S3-note-02#1",
+            0.6911
+          ],
+          [
+            "S3-note-02#4",
+            0.6892
+          ]
+        ],
+        "evidence": [
+          {
+            "id": "S3-note-02#boss-neandersloth-cokhione",
+            "kind": "fact",
+            "source_id": "S3-note-02",
+            "status": "author_knowledge",
+            "text": "Neandersloth CoKhione is played by 4 archetype(s): Dem Dio Hades, Dio Duggy, Hades Sloth, Hades Trifernal/Sloth.",
+            "scores": {}
+          },
+          {
+            "id": "S3-note-02#5",
+            "kind": "chunk",
+            "source_id": "S3-note-02",
+            "status": "author_knowledge",
+            "text": "Dio Duggy (Dionysus Duggy) plays Neandersloth CoKhione, Duggabyss or Centaurbor CoDionysus.",
+            "scores": {
+              "rrf": 0.0328,
+              "keyword_bm25": 7.207,
+              "vector_cosine": 0.754
+            }
+          },
+          {
+            "id": "S3-note-02#2",
+            "kind": "chunk",
+            "source_id": "S3-note-02",
+            "status": "author_knowledge",
+            "text": "Hades Sloth plays Neandersloth CoKhione. Hades Trifernal plays Trifernal CoHades or Sulfury.",
+            "scores": {
+              "rrf": 0.0323,
+              "keyword_bm25": 7.149,
+              "vector_cosine": 0.75
+            }
+          },
+          {
+            "id": "S3-note-01#3",
+            "kind": "chunk",
+            "source_id": "S3-note-01",
+            "status": "author_knowledge",
+            "text": "Overall, the meta is less defined by the decks that are played, but rather by the bosses that each deck played. Celestleo, Dimenshen, Neandersloth, and Fish (as a whole) are all very difficult bosses to beat, and if any deck is able to have one of them stay on the board, the tempo of the game sways completely in their favor.",
+            "scores": {
+              "rrf": 0.0313,
+              "keyword_bm25": 2.696,
+              "vector_cosine": 0.716
+            }
+          },
+          {
+            "id": "S3-note-01#1",
+            "kind": "chunk",
+            "source_id": "S3-note-01",
+            "status": "author_knowledge",
+            "text": "The current meta is very diverse, with many strong decks being played, but at the last event, the Columbus Open, the majority of the decks played were Athena Dimenshen, Apollo Celestleo, Hades Trifernal, Fish, Hades Sloth, and Sulfury in that order.",
+            "scores": {
+              "rrf": 0.0313,
+              "keyword_bm25": 1.696,
+              "vector_cosine": 0.727
+            }
+          }
+        ],
+        "commit": "753f69110f79aaaefe3308f8fb4f8954f39b3540"
+      },
+      "passed": true,
+      "problems": []
+    },
+    {
+      "item": {
+        "id": "C8",
+        "question": "How many copies of Lochagon did the Columbus Open winner run?",
+        "tests": "missing decklist must not become zero",
+        "expect_status": "any",
+        "expect_sources": [],
+        "expect_terms": [],
+        "forbid_terms": [
+          "0 copies",
+          "zero copies",
+          "ran 0"
+        ]
+      },
+      "response": {
+        "question": "How many copies of Lochagon did the Columbus Open winner run?",
+        "answer": "According to the author's notes, no decklist is imported for the Columbus Open, so card counts for that event are unknown (not zero) [S3-note-01#tournament-t-columbus-open-2026]. The winner played Fish, and player names are not stored [S3-note-01#placement-columbus-1st].",
+        "status": "answered",
+        "citations": [
+          "S3-note-01#tournament-t-columbus-open-2026",
+          "S3-note-01#placement-columbus-1st"
+        ],
+        "removed_citations": [],
+        "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
+        "model": "gemini-3.5-flash-lite",
+        "warnings": [],
+        "retrieval_mode": "hybrid",
+        "keyword_hits": [
+          [
+            "S3-note-01#1",
+            8.297956542541913
+          ],
+          [
+            "S3-note-01#2",
+            8.210866366292397
+          ],
+          [
+            "S3-note-02#1",
+            4.329889522452774
+          ],
+          [
+            "S3-note-02#4",
+            4.025405365371488
+          ],
+          [
+            "S3-note-01#3",
+            3.352156309344608
+          ],
+          [
+            "S3-note-03#2",
+            2.1843622088274617
+          ]
+        ],
+        "vector_hits": [
+          [
+            "S3-note-01#2",
+            0.7735
+          ],
+          [
+            "S3-note-01#1",
+            0.7368
+          ],
+          [
+            "S4-worlds-2026-decklist#1",
+            0.7176
+          ],
+          [
+            "S3-note-01#3",
+            0.7167
+          ],
+          [
+            "S2-premier-2026-10-24#4",
+            0.7039
+          ],
+          [
+            "S5-premier-2026-11-21#4",
+            0.7038
+          ],
+          [
+            "S3-note-02#1",
+            0.6894
+          ],
+          [
+            "S5-premier-2026-11-21#3",
+            0.6842
+          ]
+        ],
+        "evidence": [
+          {
+            "id": "S3-note-01#tournament-t-columbus-open-2026",
+            "kind": "fact",
+            "source_id": "S3-note-01",
+            "status": "unknown",
+            "text": "No decklist is imported for Columbus Open, so card counts for that event are unknown (not zero).",
+            "scores": {}
+          },
+          {
+            "id": "S3-note-02#boss-lochagon",
+            "kind": "fact",
+            "source_id": "S3-note-02",
+            "status": "author_knowledge",
+            "text": "Lochagon is played by 1 archetype(s): Fish.",
+            "scores": {}
+          },
+          {
+            "id": "S3-note-01#placement-columbus-1st",
+            "kind": "fact",
+            "source_id": "S3-note-01",
+            "status": "author_knowledge",
+            "text": "1st at Columbus Open (2026-11-07 to 2026-11-08): Fish. Note: Winner played Fish (Peter's notes; official results not yet posted on TopElestrals as of 2026-11-19).",
+            "scores": {}
+          },
+          {
+            "id": "S3-note-01#1",
+            "kind": "chunk",
+            "source_id": "S3-note-01",
+            "status": "author_knowledge",
+            "text": "The current meta is very diverse, with many strong decks being played, but at the last event, the Columbus Open, the majority of the decks played were Athena Dimenshen, Apollo Celestleo, Hades Trifernal, Fish, Hades Sloth, and Sulfury in that order.",
+            "scores": {
+              "rrf": 0.0325,
+              "keyword_bm25": 8.298,
+              "vector_cosine": 0.737
+            }
+          },
+          {
+            "id": "S3-note-01#2",
+            "kind": "chunk",
+            "source_id": "S3-note-01",
+            "status": "author_knowledge",
+            "text": "The main topping decks were Hades Sloth, Fish, Dionysus Duggy, and a few scattered other decks, with the winner playing Fish.",
+            "scores": {
+              "rrf": 0.0325,
+              "keyword_bm25": 8.211,
+              "vector_cosine": 0.773
+            }
+          },
+          {
+            "id": "S3-note-01#3",
+            "kind": "chunk",
+            "source_id": "S3-note-01",
+            "status": "author_knowledge",
+            "text": "Overall, the meta is less defined by the decks that are played, but rather by the bosses that each deck played. Celestleo, Dimenshen, Neandersloth, and Fish (as a whole) are all very difficult bosses to beat, and if any deck is able to have one of them stay on the board, the tempo of the game sways completely in their favor.",
+            "scores": {
+              "rrf": 0.031,
+              "keyword_bm25": 3.352,
+              "vector_cosine": 0.717
+            }
+          },
+          {
+            "id": "S3-note-02#1",
+            "kind": "chunk",
+            "source_id": "S3-note-02",
+            "status": "author_knowledge",
+            "text": "Around the Columbus Open (November 7 to 8, 2026), these are the bosses each archetype plays. A slash means the deck plays any of those bosses.",
+            "scores": {
+              "rrf": 0.0308,
+              "keyword_bm25": 4.33,
+              "vector_cosine": 0.689
+            }
+          }
+        ],
+        "commit": "753f69110f79aaaefe3308f8fb4f8954f39b3540"
+      },
+      "passed": true,
+      "problems": []
+    },
+    {
+      "item": {
+        "id": "R1",
+        "question": "Who won the November 21 Premier?",
+        "tests": "newest imported event (structured)",
+        "expect_status": "answered",
+        "expect_sources": [
+          "S5-premier-2026-11-21"
+        ],
+        "expect_terms": [
+          "Hermes Toolbox"
+        ]
+      },
+      "response": {
+        "question": "Who won the November 21 Premier?",
+        "answer": "The November 21 Premier Webcam Tournament was won by the Hermes Toolbox archetype [S5-premier-2026-11-21#placement-p1]. Player names are not stored.",
+        "status": "answered",
+        "citations": [
+          "S5-premier-2026-11-21#placement-p1"
+        ],
+        "removed_citations": [],
+        "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
+        "model": "gemini-3.5-flash-lite",
+        "warnings": [],
+        "retrieval_mode": "hybrid",
+        "keyword_hits": [
+          [
+            "S5-premier-2026-11-21#1",
+            5.351106560409214
+          ],
+          [
+            "S1-worlds-2026#1",
+            3.5839828598026324
+          ],
+          [
+            "S3-note-03#2",
+            3.333418638443009
+          ],
+          [
+            "S5-premier-2026-11-21#4",
+            2.8389592194518545
+          ],
+          [
+            "S5-premier-2026-11-21#3",
+            2.219688940882015
+          ],
+          [
+            "S5-premier-2026-11-21#2",
+            2.1514275541468835
+          ],
+          [
+            "S3-note-03#4",
+            2.023628108584759
+          ],
+          [
+            "S3-note-02#1",
+            1.5668102954332022
+          ]
+        ],
+        "vector_hits": [
+          [
+            "S5-premier-2026-11-21#4",
+            0.7077
+          ],
+          [
+            "S5-premier-2026-11-21#1",
+            0.7045
+          ],
+          [
+            "S5-premier-2026-11-21#3",
+            0.6941
+          ],
+          [
+            "S3-note-03#2",
+            0.6798
+          ],
+          [
+            "S5-premier-2026-11-21#2",
+            0.6788
+          ],
+          [
+            "S2-premier-2026-10-24#4",
+            0.6572
+          ],
+          [
+            "S2-premier-2026-10-24#1",
+            0.6516
+          ],
+          [
+            "S2-premier-2026-10-24#2",
+            0.6507
+          ]
+        ],
+        "evidence": [
+          {
+            "id": "S5-premier-2026-11-21#placement-p1",
+            "kind": "fact",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "1st at November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21): Hermes Toolbox (Wind 13, Earth 3, Water 3, Lunar 1). Note: Archetype name from Peter Balasis's notes (2026-11-23); TopElestrals shows only elements and featured cards. Runs Galaxea to answer Apheros decks in the current meta.",
+            "scores": {}
+          },
+          {
+            "id": "S5-premier-2026-11-21#1",
+            "kind": "chunk",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) was held on 2026-11-21 with 76 participants.",
+            "scores": {
+              "rrf": 0.0325,
+              "keyword_bm25": 5.351,
+              "vector_cosine": 0.705
+            }
+          },
+          {
+            "id": "S5-premier-2026-11-21#4",
+            "kind": "chunk",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "The main deck ran 2 Poison Tipped Arrow; 2 Dense Fog; 1 Avialith - Champion of Hermes; 2 Tsunami; 2 Carryoff - Champion of Hermes; 2 Carryon - Champion of Hermes; 3 Spinosect - Champion of Hermes; 3 Spinymph - Champion of Hermes; 2 Galaxea - Champion of Poseidon; 3 Hermes' Trickery; 3 Hermes; 2 Galaxea; 2 Cyanectar - Champion of Dionysus; 1 Fowlicane; 3 Gorgon's Gaze; 1 Cyclovenom - Champion of Hermes; 2 Peliquarius; 3 Shield of Achilles; 1 Toxiswarm - Champion of Hermes.",
+            "scores": {
+              "rrf": 0.032,
+              "keyword_bm25": 2.839,
+              "vector_cosine": 0.708
+            }
+          },
+          {
+            "id": "S3-note-03#2",
+            "kind": "chunk",
+            "source_id": "S3-note-03",
+            "status": "author_knowledge",
+            "text": "- Hermes Toolbox: a Hermes deck that uses the core Hermes cards to adapt to each matchup. The November 21 winning list adds Galaxea to answer Apheros, which is common in the current meta. - Hephestia: a deck that combines the Hephaestus and Hestia cores. - Hades Trifernal/Sloth: a Hades deck named for its two bosses, Trifernal (Champion of Hades) and Neandersloth (Champion of Khione). - Dio Duggy: pairs Dionysus with the Duggy and Duggabyss line. - Dem Dio: runs several copies of both Demeter and Dionysus, but leans on Demeter. - Dem Dio Hades: a Dem Dio list that adds Hades and Neandersloth. - Lunar Aggro: a Lunar deck with no bosses and a lot of removal.",
+            "scores": {
+              "rrf": 0.0315,
+              "keyword_bm25": 3.333,
+              "vector_cosine": 0.68
+            }
+          },
+          {
+            "id": "S5-premier-2026-11-21#3",
+            "kind": "chunk",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "The Top 8 deck's main-deck elements were Earth 15, Lunar 2, Water 2, Frost 1; featured cards included Gigafflora - Champion of Demeter, Dionysus, Equilynx - Champion of Demeter, Equilynx, Demeter, Mosstacean - Champion of Demeter. The Top 8 deck's main-deck elements were Earth 13, Frost 5, Fire 2; featured cards included Equilynx, Cyanectar - Champion of Dionysus, Demeter, Dionysus' Madness, Sproutyr - Champion of Dionysus, Cyprong - Champion of Dionysus. The Top 8 deck's main-deck elements were Earth 18, Water 2; featured cards included Vysceris, Satymber - Champion of Dionysus, Foloi Forest, Dionysus' Madness, Equilynx, Sproutyr - Champion of Dionysus. The Top 8 deck's main-deck elements were Lunar 17, Water 2, Frost 1; featured cards included Rise from the Shadows, Specteris, Lunar Phase - Full Moon, Gloombatt, Doppelgator, Gloombatt - Champion of Athena.",
+            "scores": {
+              "rrf": 0.0313,
+              "keyword_bm25": 2.22,
+              "vector_cosine": 0.694
+            }
+          }
+        ],
+        "commit": "753f69110f79aaaefe3308f8fb4f8954f39b3540"
+      },
+      "passed": true,
+      "problems": []
+    },
+    {
+      "item": {
+        "id": "R2",
+        "question": "How many copies of Argo were in the Worlds winning deck?",
+        "tests": "exact count from a newly imported decklist",
+        "expect_status": "answered",
+        "expect_sources": [
+          "S4-worlds-2026-decklist"
+        ],
+        "expect_terms": [
+          "3"
+        ]
+      },
+      "response": {
+        "question": "How many copies of Argo were in the Worlds winning deck?",
+        "answer": "There were 3 copies of Argo in the 1st-place 2026 Elestrals World Championship deck [S4-worlds-2026-decklist#deck-d-worlds-2026-1; S4-worlds-2026-decklist#1].",
+        "status": "answered",
+        "citations": [
+          "S4-worlds-2026-decklist#deck-d-worlds-2026-1",
+          "S4-worlds-2026-decklist#1"
+        ],
+        "removed_citations": [],
+        "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
+        "model": "gemini-3.5-flash-lite",
+        "warnings": [],
+        "retrieval_mode": "hybrid",
+        "keyword_hits": [
+          [
+            "S4-worlds-2026-decklist#1",
+            3.5095611831940787
+          ],
+          [
+            "S3-note-01#1",
+            3.3035441533640135
+          ],
+          [
+            "S1-worlds-2026#3",
+            3.181296250429883
+          ],
+          [
+            "S3-note-03#2",
+            2.5729266110023055
+          ],
+          [
+            "S2-premier-2026-10-24#1",
+            0.673977293577715
+          ],
+          [
+            "S5-premier-2026-11-21#1",
+            0.673977293577715
+          ],
+          [
+            "S2-premier-2026-10-24#4",
+            0.6582492490549349
+          ],
+          [
+            "S5-premier-2026-11-21#4",
+            0.6582492490549349
+          ]
+        ],
+        "vector_hits": [
+          [
+            "S4-worlds-2026-decklist#1",
+            0.7726
+          ],
+          [
+            "S5-premier-2026-11-21#4",
+            0.7444
+          ],
+          [
+            "S2-premier-2026-10-24#4",
+            0.7384
+          ],
+          [
+            "S2-premier-2026-10-24#3",
+            0.7152
+          ],
+          [
+            "S5-premier-2026-11-21#3",
+            0.7148
+          ],
+          [
+            "S1-worlds-2026#3",
+            0.7146
+          ],
+          [
+            "S1-worlds-2026#2",
+            0.7095
+          ],
+          [
+            "S3-note-01#1",
+            0.7052
+          ]
+        ],
+        "evidence": [
+          {
+            "id": "S4-worlds-2026-decklist#deck-d-worlds-2026-1",
+            "kind": "fact",
+            "source_id": "S4-worlds-2026-decklist",
+            "status": "externally_verified",
+            "text": "The 1st-place deck at 2026 Elestrals World Championship (2026-03-21) ran Argo: 3 in the main deck.",
+            "scores": {}
+          },
+          {
+            "id": "S1-worlds-2026#placement-worlds-1st",
+            "kind": "fact",
+            "source_id": "S1-worlds-2026",
+            "status": "externally_verified",
+            "text": "1st at 2026 Elestrals World Championship (2026-03-21): Celestleo. Note: Won by Mike Thomas (Trishula) with a Celestleo decklist.",
+            "scores": {}
+          },
+          {
+            "id": "S4-worlds-2026-decklist#1",
+            "kind": "chunk",
+            "source_id": "S4-worlds-2026-decklist",
+            "status": "externally_verified",
+            "text": "The main deck ran 3 Nebuleo; 1 Celestleo; 2 Glimbatt - Champion of Apollo; 3 Novacore - Champion of Apollo; 3 Lumaroo; 3 Exaltus; 1 Plucky; 1 Earthquake; 3 Apollo; 1 Lyre of Apollo; 2 Temple of the Sun; 2 First Light; 1 Solar Burst; 3 Guardian of Light; 1 Necklace of Harmonia; 2 Altar of Stars; 3 Argo; 3 Gorgon's Gaze; 2 Shield of Achilles.",
+            "scores": {
+              "rrf": 0.0328,
+              "keyword_bm25": 3.51,
+              "vector_cosine": 0.773
+            }
+          },
+          {
+            "id": "S1-worlds-2026#3",
+            "kind": "chunk",
+            "source_id": "S1-worlds-2026",
+            "status": "externally_verified",
+            "text": "Because Celestleo's Pride and Fish Nexus led the field, Solar and Water were the elements most featured among the top Elestrals at Worlds. Even so, the single most represented Elestral was Cyanectar, Champion of Dionysus, because it can search out key Runes such as Poison Tipped Arrow.",
+            "scores": {
+              "rrf": 0.031,
+              "keyword_bm25": 3.181,
+              "vector_cosine": 0.715
+            }
+          },
+          {
+            "id": "S3-note-01#1",
+            "kind": "chunk",
+            "source_id": "S3-note-01",
+            "status": "author_knowledge",
+            "text": "The current meta is very diverse, with many strong decks being played, but at the last event, the Columbus Open, the majority of the decks played were Athena Dimenshen, Apollo Celestleo, Hades Trifernal, Fish, Hades Sloth, and Sulfury in that order.",
+            "scores": {
+              "rrf": 0.0308,
+              "keyword_bm25": 3.304,
+              "vector_cosine": 0.705
+            }
+          },
+          {
+            "id": "S5-premier-2026-11-21#4",
+            "kind": "chunk",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "The main deck ran 2 Poison Tipped Arrow; 2 Dense Fog; 1 Avialith - Champion of Hermes; 2 Tsunami; 2 Carryoff - Champion of Hermes; 2 Carryon - Champion of Hermes; 3 Spinosect - Champion of Hermes; 3 Spinymph - Champion of Hermes; 2 Galaxea - Champion of Poseidon; 3 Hermes' Trickery; 3 Hermes; 2 Galaxea; 2 Cyanectar - Champion of Dionysus; 1 Fowlicane; 3 Gorgon's Gaze; 1 Cyclovenom - Champion of Hermes; 2 Peliquarius; 3 Shield of Achilles; 1 Toxiswarm - Champion of Hermes.",
+            "scores": {
+              "rrf": 0.0308,
+              "keyword_bm25": 0.658,
+              "vector_cosine": 0.744
+            }
+          }
+        ],
+        "commit": "753f69110f79aaaefe3308f8fb4f8954f39b3540"
+      },
+      "passed": true,
+      "problems": []
+    },
+    {
+      "item": {
+        "id": "R3",
+        "question": "What was the most recent tournament you know about?",
+        "tests": "coverage / latest event",
+        "expect_status": "answered",
+        "expect_sources": [
+          "S5-premier-2026-11-21"
+        ],
+        "expect_terms": [
+          "November 21"
+        ]
+      },
+      "response": {
+        "question": "What was the most recent tournament you know about?",
+        "answer": "The most recent tournament known is the November 21, 2026 Premier Webcam Tournament, which was hosted by Elestrals on November 21, 2026 [S5-premier-2026-11-21#1].",
+        "status": "answered",
+        "citations": [
+          "S5-premier-2026-11-21#1"
+        ],
+        "removed_citations": [],
+        "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
+        "model": "gemini-3.5-flash-lite",
+        "warnings": [],
+        "retrieval_mode": "hybrid",
+        "keyword_hits": [
+          [
+            "S1-worlds-2026#3",
+            2.8674910933817124
+          ],
+          [
+            "S3-note-01#1",
+            2.2385505820981058
+          ],
+          [
+            "S3-note-03#4",
+            1.6955818531096047
+          ],
+          [
+            "S2-premier-2026-10-24#1",
+            1.3696777404066773
+          ],
+          [
+            "S5-premier-2026-11-21#1",
+            1.3696777404066773
+          ],
+          [
+            "S2-premier-2026-10-24#4",
+            0.7565607491681681
+          ],
+          [
+            "S5-premier-2026-11-21#4",
+            0.7565607491681681
+          ],
+          [
+            "S2-premier-2026-10-24#2",
+            0.596259586221721
+          ]
+        ],
+        "vector_hits": [
+          [
+            "S5-premier-2026-11-21#1",
+            0.7067
+          ],
+          [
+            "S1-worlds-2026#4",
+            0.7064
+          ],
+          [
+            "S2-premier-2026-10-24#1",
+            0.7049
+          ],
+          [
+            "S3-note-01#1",
+            0.6957
+          ],
+          [
+            "S2-premier-2026-10-24#2",
+            0.6706
+          ],
+          [
+            "S2-premier-2026-10-24#3",
+            0.6704
+          ],
+          [
+            "S2-premier-2026-10-24#4",
+            0.6691
+          ],
+          [
+            "S3-note-02#1",
+            0.6691
+          ]
+        ],
+        "evidence": [
+          {
+            "id": "S5-premier-2026-11-21#placement-p1",
+            "kind": "fact",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "1st at November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21): Hermes Toolbox (Wind 13, Earth 3, Water 3, Lunar 1). Note: Archetype name from Peter Balasis's notes (2026-11-23); TopElestrals shows only elements and featured cards. Runs Galaxea to answer Apheros decks in the current meta.",
+            "scores": {}
+          },
+          {
+            "id": "S5-premier-2026-11-21#1",
+            "kind": "chunk",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) was held on 2026-11-21 with 76 participants.",
+            "scores": {
+              "rrf": 0.0318,
+              "keyword_bm25": 1.37,
+              "vector_cosine": 0.707
+            }
+          },
+          {
+            "id": "S3-note-01#1",
+            "kind": "chunk",
+            "source_id": "S3-note-01",
+            "status": "author_knowledge",
+            "text": "The current meta is very diverse, with many strong decks being played, but at the last event, the Columbus Open, the majority of the decks played were Athena Dimenshen, Apollo Celestleo, Hades Trifernal, Fish, Hades Sloth, and Sulfury in that order.",
+            "scores": {
+              "rrf": 0.0318,
+              "keyword_bm25": 2.239,
+              "vector_cosine": 0.696
+            }
+          },
+          {
+            "id": "S2-premier-2026-10-24#1",
+            "kind": "chunk",
+            "source_id": "S2-premier-2026-10-24",
+            "status": "externally_verified",
+            "text": "October 24, 2026 Premier Webcam Tournament (hosted by Elestrals) was held on 2026-10-24 with 66 participants.",
+            "scores": {
+              "rrf": 0.0315,
+              "keyword_bm25": 1.37,
+              "vector_cosine": 0.705
+            }
+          },
+          {
+            "id": "S2-premier-2026-10-24#2",
+            "kind": "chunk",
+            "source_id": "S2-premier-2026-10-24",
+            "status": "externally_verified",
+            "text": "The 1st deck's main-deck elements were Fire 16, Wind 3, Water 1; featured cards included Hestia's Hearth, Eruption - Hephaestus' Jealousy, Rummacoal, Ashrabbit - Champion of Hestia, Majursa - Champion of Hestia, Kindleo. The 2nd deck's main-deck elements were Lunar 17, Frost 2, Water 1; featured cards included Lunar Phase - Lunar Eclipse, Temple of the Moon, Werepup, Doppelgator, Gloombatt, Auraboros. The Top 4 deck's main-deck elements were Fire 12, Frost 8; featured cards included Volcanic Forge, Hades, Frosmite - Champion of Hades, Trifernal - Champion of Hades, Blazerus - Champion of Hades, Eruption - Hephaestus' Jealousy. The Top 4 deck's main-deck elements were Frost 14, Earth 4, Fire 2; featured cards included Polzer - Champion of Hades, Kryoling, Frosmite - Champion of Hades, Kryoling - Champion of Hades, Eternal Winter, Hades.",
+            "scores": {
+              "rrf": 0.0301,
+              "keyword_bm25": 0.596,
+              "vector_cosine": 0.671
+            }
+          }
+        ],
+        "commit": "753f69110f79aaaefe3308f8fb4f8954f39b3540"
+      },
+      "passed": true,
+      "problems": []
+    },
+    {
+      "item": {
+        "id": "R4",
+        "question": "What is a Hestia Spiders deck?",
+        "tests": "author note, definition",
+        "expect_status": "answered",
+        "expect_sources": [
+          "S3-note-03"
+        ],
+        "expect_terms": [
+          "Kitemite"
+        ]
+      },
+      "response": {
+        "question": "What is a Hestia Spiders deck?",
+        "answer": "According to the author's notes, a Hestia Spiders deck is a Hestia deck that incorporates Wind cards and is built around Kitemite and Parachne (both Champion of Hestia) [S3-note-03#3]. Its goal is to swarm the board and maximize damage by combining Hestia's Hearth with Parachne's Battle Phase effect [S3-note-03#3].",
+        "status": "answered",
+        "citations": [
+          "S3-note-03#3"
+        ],
+        "removed_citations": [],
+        "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
+        "model": "gemini-3.5-flash-lite",
+        "warnings": [],
+        "retrieval_mode": "hybrid",
+        "keyword_hits": [
+          [
+            "S3-note-03#3",
+            3.191163179068483
+          ],
+          [
+            "S3-note-03#4",
+            3.029011711652309
+          ],
+          [
+            "S3-note-03#6",
+            2.5459402331337406
+          ],
+          [
+            "S3-note-03#5",
+            2.1265224495048174
+          ],
+          [
+            "S3-note-03#1",
+            2.0763716199690365
+          ],
+          [
+            "S3-note-03#2",
+            1.6633620672750087
+          ],
+          [
+            "S2-premier-2026-10-24#4",
+            1.284546977347223
+          ],
+          [
+            "S2-premier-2026-10-24#2",
+            0.8686852321487623
+          ]
+        ],
+        "vector_hits": [
+          [
+            "S3-note-03#3",
+            0.8774
+          ],
+          [
+            "S3-note-03#4",
+            0.8341
+          ],
+          [
+            "S3-note-03#6",
+            0.7903
+          ],
+          [
+            "S3-note-03#2",
+            0.7866
+          ],
+          [
+            "S3-note-03#1",
+            0.7692
+          ],
+          [
+            "S3-note-03#5",
+            0.7524
+          ],
+          [
+            "S2-premier-2026-10-24#4",
+            0.7322
+          ],
+          [
+            "S5-premier-2026-11-21#4",
+            0.6856
+          ]
+        ],
+        "evidence": [
+          {
+            "id": "S3-note-03#3",
+            "kind": "chunk",
+            "source_id": "S3-note-03",
+            "status": "author_knowledge",
+            "text": "Hestia Spiders is a Hestia deck that mixes in Wind cards and revolves around the new Kitemite and Parachne (both Champion of Hestia). It aims to swarm the board and deal as much damage as possible by combining Hestia's Hearth with Parachne's Battle Phase effect.",
+            "scores": {
+              "rrf": 0.0328,
+              "keyword_bm25": 3.191,
+              "vector_cosine": 0.877
+            }
+          },
+          {
+            "id": "S3-note-03#4",
+            "kind": "chunk",
+            "source_id": "S3-note-03",
+            "status": "author_knowledge",
+            "text": "Spider Bears combines Hestia Spiders with the swarming of Hestia Bears and the destruction effect of Majursa (Champion of Hestia). Some builds add any mix of Ursicle, Hibearnation and Ursa Den for extra pressure, a package players call \"Bear Bomb\". Peter has won local events with Spider Bears over the past few weeks. The Hestia Spiders Update list below cuts most of the bears for more spiders, including Arachne's Lair, and is what Peter plans to test in the week of 2026-11-23.",
+            "scores": {
+              "rrf": 0.0323,
+              "keyword_bm25": 3.029,
+              "vector_cosine": 0.834
+            }
+          },
+          {
+            "id": "S3-note-03#6",
+            "kind": "chunk",
+            "source_id": "S3-note-03",
+            "status": "author_knowledge",
+            "text": "Main deck (40): Torchin - Champion of Hestia x1, Ursmog - Champion of Hestia x3, Ashrabbit - Champion of Hestia x1, Urscout - Champion of Hestia x1, Kindleo x1, Warmite - Champion of Hestia x3, Volcaries x1, Majursa - Champion of Hestia x1, Kitemite x2, Kitemite - Champion of Hestia x3, Parachne - Champion of Hestia x3, Frosmite - Champion of Hades x2, Hestia's Hearth x3, Poison Tipped Arrow x2, Shield of Achilles x2, Gorgon's Gaze x3, Hestia x3, Arachne's Lair x2, Volcanic Forge x1, Ursa Den x1, Hestia's Hearth - Eternal Flame x1.\nSpirit deck (20): Vipyro x13 (Fire), 3 Frost (Flurrmine), 3 Wind (Lycarus), 1 Water (Leviaphin).\nSide deck (15): Chains of Prometheus x2, Sirocco of Notus x2, Pandora's Box x2, Altar of Stars x2, Tsunami x2, Volcaries x1, Ursicle x2, Hibearnation x2.",
+            "scores": {
+              "rrf": 0.0317,
+              "keyword_bm25": 2.546,
+              "vector_cosine": 0.79
+            }
+          },
+          {
+            "id": "S3-note-03#5",
+            "kind": "chunk",
+            "source_id": "S3-note-03",
+            "status": "author_knowledge",
+            "text": "Main deck (40): Ursmog - Champion of Hestia x3, Ashrabbit - Champion of Hestia x2, Urscout - Champion of Hestia x2, Kindleo x1, Warmite - Champion of Hestia x3, Majursa - Champion of Hestia x1, Kitemite - Champion of Hestia x2, Parachne - Champion of Hestia x2, Ursicle x2, Frosmite - Champion of Hades x2, Hibearnation x3, Eruption - Hephaestus' Jealousy x1, Hestia's Hearth x3, Poison Tipped Arrow x2, Shield of Achilles x2, Gorgon's Gaze x3, Hestia x3, Volcanic Forge x1, Ursa Den x1, Hestia's Hearth - Eternal Flame x1.\nSpirit deck (20): Vipyro x14 (Fire), 3 Frost (Flurrmine), 2 Wind (Lycarus), 1 Earth (Teratlas).\nSide deck: not recorded. The side deck in Peter's image was a temporary test, not a real side deck for this list.",
+            "scores": {
+              "rrf": 0.0308,
+              "keyword_bm25": 2.127,
+              "vector_cosine": 0.752
+            }
+          }
+        ],
+        "commit": "753f69110f79aaaefe3308f8fb4f8954f39b3540"
+      },
+      "passed": true,
+      "problems": []
+    },
+    {
+      "item": {
+        "id": "R5",
+        "question": "Who won the December 5 Premier?",
+        "tests": "missing evidence: event not imported",
+        "expect_status": "insufficient",
+        "expect_sources": [],
+        "expect_terms": []
+      },
+      "response": {
+        "question": "Who won the December 5 Premier?",
+        "answer": "I don't have a source for that in my imported data.",
+        "status": "insufficient",
+        "citations": [],
+        "removed_citations": [],
+        "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
+        "model": "gemini-3.5-flash-lite",
+        "warnings": [],
+        "retrieval_mode": "hybrid",
+        "keyword_hits": [
+          [
+            "S1-worlds-2026#1",
+            3.5839828598026324
+          ],
+          [
+            "S3-note-03#4",
+            2.023628108584759
+          ],
+          [
+            "S2-premier-2026-10-24#1",
+            0.8426180728671617
+          ],
+          [
+            "S5-premier-2026-11-21#1",
+            0.8426180728671617
+          ],
+          [
+            "S1-worlds-2026#4",
+            0.7050504941227537
+          ],
+          [
+            "S2-premier-2026-10-24#4",
+            0.46543193458173404
+          ],
+          [
+            "S5-premier-2026-11-21#4",
+            0.46543193458173404
+          ],
+          [
+            "S3-note-03#2",
+            0.3885629086845695
+          ]
+        ],
+        "vector_hits": [
+          [
+            "S5-premier-2026-11-21#4",
+            0.675
+          ],
+          [
+            "S5-premier-2026-11-21#3",
+            0.673
+          ],
+          [
+            "S2-premier-2026-10-24#2",
+            0.6649
+          ],
+          [
+            "S2-premier-2026-10-24#3",
+            0.6644
+          ],
+          [
+            "S2-premier-2026-10-24#4",
+            0.6626
+          ],
+          [
+            "S5-premier-2026-11-21#1",
+            0.6624
+          ],
+          [
+            "S5-premier-2026-11-21#2",
+            0.6611
+          ],
+          [
+            "S3-note-03#2",
+            0.6489
+          ]
+        ],
+        "evidence": [
+          {
+            "id": "S5-premier-2026-11-21#placement-p1",
+            "kind": "fact",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "1st at November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21): Hermes Toolbox (Wind 13, Earth 3, Water 3, Lunar 1). Note: Archetype name from Peter Balasis's notes (2026-11-23); TopElestrals shows only elements and featured cards. Runs Galaxea to answer Apheros decks in the current meta.",
+            "scores": {}
+          },
+          {
+            "id": "S3-note-01#placement-columbus-1st",
+            "kind": "fact",
+            "source_id": "S3-note-01",
+            "status": "author_knowledge",
+            "text": "1st at Columbus Open (2026-11-07 to 2026-11-08): Fish. Note: Winner played Fish (Peter's notes; official results not yet posted on TopElestrals as of 2026-11-19).",
+            "scores": {}
+          },
+          {
+            "id": "S2-premier-2026-10-24#placement-p1",
+            "kind": "fact",
+            "source_id": "S2-premier-2026-10-24",
+            "status": "externally_verified",
+            "text": "1st at October 24, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-10-24): Fire 16, Wind 3, Water 1 deck.",
+            "scores": {}
+          },
+          {
+            "id": "S1-worlds-2026#placement-worlds-1st",
+            "kind": "fact",
+            "source_id": "S1-worlds-2026",
+            "status": "externally_verified",
+            "text": "1st at 2026 Elestrals World Championship (2026-03-21): Celestleo. Note: Won by Mike Thomas (Trishula) with a Celestleo decklist.",
+            "scores": {}
+          },
+          {
+            "id": "S5-premier-2026-11-21#4",
+            "kind": "chunk",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "The main deck ran 2 Poison Tipped Arrow; 2 Dense Fog; 1 Avialith - Champion of Hermes; 2 Tsunami; 2 Carryoff - Champion of Hermes; 2 Carryon - Champion of Hermes; 3 Spinosect - Champion of Hermes; 3 Spinymph - Champion of Hermes; 2 Galaxea - Champion of Poseidon; 3 Hermes' Trickery; 3 Hermes; 2 Galaxea; 2 Cyanectar - Champion of Dionysus; 1 Fowlicane; 3 Gorgon's Gaze; 1 Cyclovenom - Champion of Hermes; 2 Peliquarius; 3 Shield of Achilles; 1 Toxiswarm - Champion of Hermes.",
+            "scores": {
+              "rrf": 0.0313,
+              "keyword_bm25": 0.465,
+              "vector_cosine": 0.675
+            }
+          },
+          {
+            "id": "S5-premier-2026-11-21#1",
+            "kind": "chunk",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) was held on 2026-11-21 with 76 participants.",
+            "scores": {
+              "rrf": 0.0308,
+              "keyword_bm25": 0.843,
+              "vector_cosine": 0.662
+            }
+          },
+          {
+            "id": "S2-premier-2026-10-24#4",
+            "kind": "chunk",
+            "source_id": "S2-premier-2026-10-24",
+            "status": "externally_verified",
+            "text": "The main deck ran 3 Hestia's Hearth; 1 Eruption - Hephaestus' Jealousy; 3 Kitemite - Champion of Hestia; 2 Rummacoal; 3 Ashrabbit - Champion of Hestia; 1 Majursa - Champion of Hestia; 2 Parachne - Champion of Hestia; 1 Kindleo; 3 Hestia; 3 Poison Tipped Arrow; 1 Hestia's Hearth - Eternal Flame; 3 Gorgon's Gaze; 2 Urscout - Champion of Hestia; 3 Warmite - Champion of Hestia; 2 Volcanic Forge; 2 Resting on Your Laurels; 2 Volcaries; 3 Ursmog - Champion of Hestia.",
+            "scores": {
+              "rrf": 0.0305,
+              "keyword_bm25": 0.465,
+              "vector_cosine": 0.663
+            }
+          },
+          {
+            "id": "S3-note-03#2",
+            "kind": "chunk",
+            "source_id": "S3-note-03",
+            "status": "author_knowledge",
+            "text": "- Hermes Toolbox: a Hermes deck that uses the core Hermes cards to adapt to each matchup. The November 21 winning list adds Galaxea to answer Apheros, which is common in the current meta. - Hephestia: a deck that combines the Hephaestus and Hestia cores. - Hades Trifernal/Sloth: a Hades deck named for its two bosses, Trifernal (Champion of Hades) and Neandersloth (Champion of Khione). - Dio Duggy: pairs Dionysus with the Duggy and Duggabyss line. - Dem Dio: runs several copies of both Demeter and Dionysus, but leans on Demeter. - Dem Dio Hades: a Dem Dio list that adds Hades and Neandersloth. - Lunar Aggro: a Lunar deck with no bosses and a lot of removal.",
+            "scores": {
+              "rrf": 0.0294,
+              "keyword_bm25": 0.389,
+              "vector_cosine": 0.649
+            }
+          }
+        ],
+        "commit": "753f69110f79aaaefe3308f8fb4f8954f39b3540"
+      },
+      "passed": true,
+      "problems": []
+    },
+    {
+      "item": {
+        "id": "R6",
+        "question": "How many copies of Hestia were in the 2nd place deck at the November 21 Premier?",
+        "tests": "missing evidence: only the winner's list is imported",
+        "expect_status": "any",
+        "expect_sources": [],
+        "expect_terms": [],
+        "forbid_terms": [
+          "2nd place deck contains 0",
+          "2nd-place deck contains 0",
+          "2nd place deck ran 0",
+          "2nd-place deck ran 0",
+          "second place deck had 0"
+        ]
+      },
+      "response": {
+        "question": "How many copies of Hestia were in the 2nd place deck at the November 21 Premier?",
+        "answer": "I don't have a source for that in my imported data.",
+        "status": "withheld",
+        "citations": [],
+        "removed_citations": [],
+        "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
+        "model": "gemini-3.5-flash-lite",
+        "warnings": [
+          "The model's answer had no valid citation, so it was withheld."
+        ],
+        "retrieval_mode": "hybrid",
+        "keyword_hits": [
+          [
+            "S3-note-03#2",
+            6.271206817941815
+          ],
+          [
+            "S5-premier-2026-11-21#1",
+            5.351106560409214
+          ],
+          [
+            "S5-premier-2026-11-21#2",
+            4.455510936176683
+          ],
+          [
+            "S1-worlds-2026#1",
+            3.412832954364293
+          ],
+          [
+            "S3-note-01#1",
+            3.3035441533640135
+          ],
+          [
+            "S2-premier-2026-10-24#2",
+            2.9031695708129788
+          ],
+          [
+            "S5-premier-2026-11-21#4",
+            2.8389601305884793
+          ],
+          [
+            "S5-premier-2026-11-21#3",
+            2.219690685493556
+          ]
+        ],
+        "vector_hits": [
+          [
+            "S2-premier-2026-10-24#4",
+            0.7984
+          ],
+          [
+            "S3-note-03#2",
+            0.796
+          ],
+          [
+            "S5-premier-2026-11-21#4",
+            0.7868
+          ],
+          [
+            "S5-premier-2026-11-21#2",
+            0.7762
+          ],
+          [
+            "S5-premier-2026-11-21#3",
+            0.7671
+          ],
+          [
+            "S3-note-03#6",
+            0.7543
+          ],
+          [
+            "S2-premier-2026-10-24#2",
+            0.7487
+          ],
+          [
+            "S3-note-03#5",
+            0.742
+          ]
+        ],
+        "evidence": [
+          {
+            "id": "S5-premier-2026-11-21#deck-d-premier-2026-11-21-1",
+            "kind": "fact",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "The complete 1st-place decklist at November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) contains 0 copies of Hestia.",
+            "scores": {}
+          },
+          {
+            "id": "S3-note-03#2",
+            "kind": "chunk",
+            "source_id": "S3-note-03",
+            "status": "author_knowledge",
+            "text": "- Hermes Toolbox: a Hermes deck that uses the core Hermes cards to adapt to each matchup. The November 21 winning list adds Galaxea to answer Apheros, which is common in the current meta. - Hephestia: a deck that combines the Hephaestus and Hestia cores. - Hades Trifernal/Sloth: a Hades deck named for its two bosses, Trifernal (Champion of Hades) and Neandersloth (Champion of Khione). - Dio Duggy: pairs Dionysus with the Duggy and Duggabyss line. - Dem Dio: runs several copies of both Demeter and Dionysus, but leans on Demeter. - Dem Dio Hades: a Dem Dio list that adds Hades and Neandersloth. - Lunar Aggro: a Lunar deck with no bosses and a lot of removal.",
+            "scores": {
+              "rrf": 0.0325,
+              "keyword_bm25": 6.271,
+              "vector_cosine": 0.796
+            }
+          },
+          {
+            "id": "S5-premier-2026-11-21#2",
+            "kind": "chunk",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "The 1st deck's main-deck elements were Wind 13, Earth 3, Water 3, Lunar 1; featured cards included Avialith - Champion of Hermes, Carryon - Champion of Hermes, Hermes' Trickery, Hermes, Fowlicane, Cyclovenom - Champion of Hermes. The 2nd deck's main-deck elements were Fire 15, Earth 4, Water 1; featured cards included Volcanic Forge, Tongs of Hephaestus, Warmite - Champion of Hestia, Hestia's Hearth, Bellowby, Volcaries. The Top 4 deck's main-deck elements were Frost 9, Fire 6, Earth 4, Water 1; featured cards included Hades, Eternal Winter, Frosmite - Champion of Hades, Kryoling - Champion of Hades, Chillalotl - Champion of Khione, House of Hades. The Top 4 deck's main-deck elements were Earth 17, Frost 1, Lunar 1, Water 1; featured cards included Equilynx - Champion of Demeter, Cyprong - Champion of Dionysus, Equilynx, Vysceris, Midas' Touch, Sproutyr - Champion of Dionysus.",
+            "scores": {
+              "rrf": 0.0315,
+              "keyword_bm25": 4.456,
+              "vector_cosine": 0.776
+            }
+          },
+          {
+            "id": "S5-premier-2026-11-21#4",
+            "kind": "chunk",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "The main deck ran 2 Poison Tipped Arrow; 2 Dense Fog; 1 Avialith - Champion of Hermes; 2 Tsunami; 2 Carryoff - Champion of Hermes; 2 Carryon - Champion of Hermes; 3 Spinosect - Champion of Hermes; 3 Spinymph - Champion of Hermes; 2 Galaxea - Champion of Poseidon; 3 Hermes' Trickery; 3 Hermes; 2 Galaxea; 2 Cyanectar - Champion of Dionysus; 1 Fowlicane; 3 Gorgon's Gaze; 1 Cyclovenom - Champion of Hermes; 2 Peliquarius; 3 Shield of Achilles; 1 Toxiswarm - Champion of Hermes.",
+            "scores": {
+              "rrf": 0.0308,
+              "keyword_bm25": 2.839,
+              "vector_cosine": 0.787
+            }
+          },
+          {
+            "id": "S5-premier-2026-11-21#3",
+            "kind": "chunk",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "The Top 8 deck's main-deck elements were Earth 15, Lunar 2, Water 2, Frost 1; featured cards included Gigafflora - Champion of Demeter, Dionysus, Equilynx - Champion of Demeter, Equilynx, Demeter, Mosstacean - Champion of Demeter. The Top 8 deck's main-deck elements were Earth 13, Frost 5, Fire 2; featured cards included Equilynx, Cyanectar - Champion of Dionysus, Demeter, Dionysus' Madness, Sproutyr - Champion of Dionysus, Cyprong - Champion of Dionysus. The Top 8 deck's main-deck elements were Earth 18, Water 2; featured cards included Vysceris, Satymber - Champion of Dionysus, Foloi Forest, Dionysus' Madness, Equilynx, Sproutyr - Champion of Dionysus. The Top 8 deck's main-deck elements were Lunar 17, Water 2, Frost 1; featured cards included Rise from the Shadows, Specteris, Lunar Phase - Full Moon, Gloombatt, Doppelgator, Gloombatt - Champion of Athena.",
+            "scores": {
+              "rrf": 0.0301,
+              "keyword_bm25": 2.22,
+              "vector_cosine": 0.767
+            }
+          }
+        ],
+        "commit": "753f69110f79aaaefe3308f8fb4f8954f39b3540"
+      },
+      "passed": true,
+      "problems": []
+    },
+    {
+      "item": {
+        "id": "R7",
+        "question": "What is the card text of Hermes' Trickery?",
+        "tests": "missing evidence: card text is never stored",
+        "expect_status": "insufficient",
+        "expect_sources": [],
+        "expect_terms": []
+      },
+      "response": {
+        "question": "What is the card text of Hermes' Trickery?",
+        "answer": "I don't have a source for that in my imported data.",
+        "status": "insufficient",
+        "citations": [],
+        "removed_citations": [],
+        "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
+        "model": "gemini-3.5-flash-lite",
+        "warnings": [],
+        "retrieval_mode": "hybrid",
+        "keyword_hits": [
+          [
+            "S3-note-03#1",
+            6.637402553522787
+          ],
+          [
+            "S5-premier-2026-11-21#4",
+            5.815544393094989
+          ],
+          [
+            "S5-premier-2026-11-21#2",
+            4.582193837645064
+          ],
+          [
+            "S3-note-03#2",
+            2.6251803852990765
+          ],
+          [
+            "S4-worlds-2026-decklist#1",
+            2.27776957093292
+          ]
+        ],
+        "vector_hits": [
+          [
+            "S5-premier-2026-11-21#4",
+            0.6593
+          ],
+          [
+            "S3-note-03#2",
+            0.6346
+          ],
+          [
+            "S3-note-03#3",
+            0.6077
+          ],
+          [
+            "S2-premier-2026-10-24#4",
+            0.5883
+          ],
+          [
+            "S5-premier-2026-11-21#2",
+            0.5883
+          ],
+          [
+            "S3-note-03#4",
+            0.5867
+          ],
+          [
+            "S3-note-03#6",
+            0.5858
+          ],
+          [
+            "S3-note-01#1",
+            0.5806
+          ]
+        ],
+        "evidence": [
+          {
+            "id": "S5-premier-2026-11-21#4",
+            "kind": "chunk",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "The main deck ran 2 Poison Tipped Arrow; 2 Dense Fog; 1 Avialith - Champion of Hermes; 2 Tsunami; 2 Carryoff - Champion of Hermes; 2 Carryon - Champion of Hermes; 3 Spinosect - Champion of Hermes; 3 Spinymph - Champion of Hermes; 2 Galaxea - Champion of Poseidon; 3 Hermes' Trickery; 3 Hermes; 2 Galaxea; 2 Cyanectar - Champion of Dionysus; 1 Fowlicane; 3 Gorgon's Gaze; 1 Cyclovenom - Champion of Hermes; 2 Peliquarius; 3 Shield of Achilles; 1 Toxiswarm - Champion of Hermes.",
+            "scores": {
+              "rrf": 0.0325,
+              "keyword_bm25": 5.816,
+              "vector_cosine": 0.659
+            }
+          },
+          {
+            "id": "S3-note-03#2",
+            "kind": "chunk",
+            "source_id": "S3-note-03",
+            "status": "author_knowledge",
+            "text": "- Hermes Toolbox: a Hermes deck that uses the core Hermes cards to adapt to each matchup. The November 21 winning list adds Galaxea to answer Apheros, which is common in the current meta. - Hephestia: a deck that combines the Hephaestus and Hestia cores. - Hades Trifernal/Sloth: a Hades deck named for its two bosses, Trifernal (Champion of Hades) and Neandersloth (Champion of Khione). - Dio Duggy: pairs Dionysus with the Duggy and Duggabyss line. - Dem Dio: runs several copies of both Demeter and Dionysus, but leans on Demeter. - Dem Dio Hades: a Dem Dio list that adds Hades and Neandersloth. - Lunar Aggro: a Lunar deck with no bosses and a lot of removal.",
+            "scores": {
+              "rrf": 0.0318,
+              "keyword_bm25": 2.625,
+              "vector_cosine": 0.635
+            }
+          },
+          {
+            "id": "S5-premier-2026-11-21#2",
+            "kind": "chunk",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "The 1st deck's main-deck elements were Wind 13, Earth 3, Water 3, Lunar 1; featured cards included Avialith - Champion of Hermes, Carryon - Champion of Hermes, Hermes' Trickery, Hermes, Fowlicane, Cyclovenom - Champion of Hermes. The 2nd deck's main-deck elements were Fire 15, Earth 4, Water 1; featured cards included Volcanic Forge, Tongs of Hephaestus, Warmite - Champion of Hestia, Hestia's Hearth, Bellowby, Volcaries. The Top 4 deck's main-deck elements were Frost 9, Fire 6, Earth 4, Water 1; featured cards included Hades, Eternal Winter, Frosmite - Champion of Hades, Kryoling - Champion of Hades, Chillalotl - Champion of Khione, House of Hades. The Top 4 deck's main-deck elements were Earth 17, Frost 1, Lunar 1, Water 1; featured cards included Equilynx - Champion of Demeter, Cyprong - Champion of Dionysus, Equilynx, Vysceris, Midas' Touch, Sproutyr - Champion of Dionysus.",
+            "scores": {
+              "rrf": 0.0313,
+              "keyword_bm25": 4.582,
+              "vector_cosine": 0.588
+            }
+          },
+          {
+            "id": "S3-note-03#1",
+            "kind": "chunk",
+            "source_id": "S3-note-03",
+            "status": "author_knowledge",
+            "text": "Written by Peter Balasis on 2026-11-23 (version 2: clarified the deck descriptions and dropped a test side deck). This is author knowledge from a competitive player, not an official source. Unofficial Elestrals fan content: card names and counts only, no card text or art.",
+            "scores": {
+              "rrf": 0.0164,
+              "keyword_bm25": 6.637
+            }
+          }
+        ],
+        "commit": "753f69110f79aaaefe3308f8fb4f8954f39b3540"
+      },
+      "passed": true,
+      "problems": []
+    },
+    {
+      "item": {
+        "id": "R8",
+        "question": "Which deck will win the next Premier?",
+        "tests": "prediction not supported by sources",
+        "expect_status": "insufficient",
+        "expect_sources": [],
+        "expect_terms": []
+      },
+      "response": {
+        "question": "Which deck will win the next Premier?",
+        "answer": "I don't have a source for that in my imported data.",
+        "status": "insufficient",
+        "citations": [],
+        "removed_citations": [],
+        "coverage": "Latest imported event: November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21), from S5-premier-2026-11-21 (externally verified). Newer events may exist but not be imported yet.",
+        "model": "gemini-3.5-flash-lite",
+        "warnings": [],
+        "retrieval_mode": "hybrid",
+        "keyword_hits": [
+          [
+            "S2-premier-2026-10-24#1",
+            0.8426180728671617
+          ],
+          [
+            "S5-premier-2026-11-21#1",
+            0.8426180728671617
+          ],
+          [
+            "S1-worlds-2026#4",
+            0.7050504941227537
+          ],
+          [
+            "S2-premier-2026-10-24#4",
+            0.46543284571835863
+          ],
+          [
+            "S5-premier-2026-11-21#4",
+            0.46543284571835863
+          ],
+          [
+            "S3-note-03#2",
+            0.3885644021748434
+          ],
+          [
+            "S2-premier-2026-10-24#2",
+            0.36681730601354956
+          ],
+          [
+            "S5-premier-2026-11-21#3",
+            0.36390768269115553
+          ]
+        ],
+        "vector_hits": [
+          [
+            "S2-premier-2026-10-24#3",
+            0.7399
+          ],
+          [
+            "S5-premier-2026-11-21#3",
+            0.735
+          ],
+          [
+            "S2-premier-2026-10-24#2",
+            0.7319
+          ],
+          [
+            "S3-note-01#1",
+            0.7307
+          ],
+          [
+            "S2-premier-2026-10-24#4",
+            0.7247
+          ],
+          [
+            "S5-premier-2026-11-21#4",
+            0.7216
+          ],
+          [
+            "S5-premier-2026-11-21#2",
+            0.72
+          ],
+          [
+            "S3-note-03#2",
+            0.7132
+          ]
+        ],
+        "evidence": [
+          {
+            "id": "S5-premier-2026-11-21#placement-p1",
+            "kind": "fact",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "1st at November 21, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-11-21): Hermes Toolbox (Wind 13, Earth 3, Water 3, Lunar 1). Note: Archetype name from Peter Balasis's notes (2026-11-23); TopElestrals shows only elements and featured cards. Runs Galaxea to answer Apheros decks in the current meta.",
+            "scores": {}
+          },
+          {
+            "id": "S3-note-01#placement-columbus-1st",
+            "kind": "fact",
+            "source_id": "S3-note-01",
+            "status": "author_knowledge",
+            "text": "1st at Columbus Open (2026-11-07 to 2026-11-08): Fish. Note: Winner played Fish (Peter's notes; official results not yet posted on TopElestrals as of 2026-11-19).",
+            "scores": {}
+          },
+          {
+            "id": "S2-premier-2026-10-24#placement-p1",
+            "kind": "fact",
+            "source_id": "S2-premier-2026-10-24",
+            "status": "externally_verified",
+            "text": "1st at October 24, 2026 Premier Webcam Tournament (hosted by Elestrals) (2026-10-24): Fire 16, Wind 3, Water 1 deck.",
+            "scores": {}
+          },
+          {
+            "id": "S1-worlds-2026#placement-worlds-1st",
+            "kind": "fact",
+            "source_id": "S1-worlds-2026",
+            "status": "externally_verified",
+            "text": "1st at 2026 Elestrals World Championship (2026-03-21): Celestleo. Note: Won by Mike Thomas (Trishula) with a Celestleo decklist.",
+            "scores": {}
+          },
+          {
+            "id": "S2-premier-2026-10-24#4",
+            "kind": "chunk",
+            "source_id": "S2-premier-2026-10-24",
+            "status": "externally_verified",
+            "text": "The main deck ran 3 Hestia's Hearth; 1 Eruption - Hephaestus' Jealousy; 3 Kitemite - Champion of Hestia; 2 Rummacoal; 3 Ashrabbit - Champion of Hestia; 1 Majursa - Champion of Hestia; 2 Parachne - Champion of Hestia; 1 Kindleo; 3 Hestia; 3 Poison Tipped Arrow; 1 Hestia's Hearth - Eternal Flame; 3 Gorgon's Gaze; 2 Urscout - Champion of Hestia; 3 Warmite - Champion of Hestia; 2 Volcanic Forge; 2 Resting on Your Laurels; 2 Volcaries; 3 Ursmog - Champion of Hestia.",
+            "scores": {
+              "rrf": 0.031,
+              "keyword_bm25": 0.465,
+              "vector_cosine": 0.725
+            }
+          },
+          {
+            "id": "S5-premier-2026-11-21#3",
+            "kind": "chunk",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "The Top 8 deck's main-deck elements were Earth 15, Lunar 2, Water 2, Frost 1; featured cards included Gigafflora - Champion of Demeter, Dionysus, Equilynx - Champion of Demeter, Equilynx, Demeter, Mosstacean - Champion of Demeter. The Top 8 deck's main-deck elements were Earth 13, Frost 5, Fire 2; featured cards included Equilynx, Cyanectar - Champion of Dionysus, Demeter, Dionysus' Madness, Sproutyr - Champion of Dionysus, Cyprong - Champion of Dionysus. The Top 8 deck's main-deck elements were Earth 18, Water 2; featured cards included Vysceris, Satymber - Champion of Dionysus, Foloi Forest, Dionysus' Madness, Equilynx, Sproutyr - Champion of Dionysus. The Top 8 deck's main-deck elements were Lunar 17, Water 2, Frost 1; featured cards included Rise from the Shadows, Specteris, Lunar Phase - Full Moon, Gloombatt, Doppelgator, Gloombatt - Champion of Athena.",
+            "scores": {
+              "rrf": 0.0308,
+              "keyword_bm25": 0.364,
+              "vector_cosine": 0.735
+            }
+          },
+          {
+            "id": "S2-premier-2026-10-24#2",
+            "kind": "chunk",
+            "source_id": "S2-premier-2026-10-24",
+            "status": "externally_verified",
+            "text": "The 1st deck's main-deck elements were Fire 16, Wind 3, Water 1; featured cards included Hestia's Hearth, Eruption - Hephaestus' Jealousy, Rummacoal, Ashrabbit - Champion of Hestia, Majursa - Champion of Hestia, Kindleo. The 2nd deck's main-deck elements were Lunar 17, Frost 2, Water 1; featured cards included Lunar Phase - Lunar Eclipse, Temple of the Moon, Werepup, Doppelgator, Gloombatt, Auraboros. The Top 4 deck's main-deck elements were Fire 12, Frost 8; featured cards included Volcanic Forge, Hades, Frosmite - Champion of Hades, Trifernal - Champion of Hades, Blazerus - Champion of Hades, Eruption - Hephaestus' Jealousy. The Top 4 deck's main-deck elements were Frost 14, Earth 4, Fire 2; featured cards included Polzer - Champion of Hades, Kryoling, Frosmite - Champion of Hades, Kryoling - Champion of Hades, Eternal Winter, Hades.",
+            "scores": {
+              "rrf": 0.0308,
+              "keyword_bm25": 0.367,
+              "vector_cosine": 0.732
+            }
+          },
+          {
+            "id": "S5-premier-2026-11-21#4",
+            "kind": "chunk",
+            "source_id": "S5-premier-2026-11-21",
+            "status": "externally_verified",
+            "text": "The main deck ran 2 Poison Tipped Arrow; 2 Dense Fog; 1 Avialith - Champion of Hermes; 2 Tsunami; 2 Carryoff - Champion of Hermes; 2 Carryon - Champion of Hermes; 3 Spinosect - Champion of Hermes; 3 Spinymph - Champion of Hermes; 2 Galaxea - Champion of Poseidon; 3 Hermes' Trickery; 3 Hermes; 2 Galaxea; 2 Cyanectar - Champion of Dionysus; 1 Fowlicane; 3 Gorgon's Gaze; 1 Cyclovenom - Champion of Hermes; 2 Peliquarius; 3 Shield of Achilles; 1 Toxiswarm - Champion of Hermes.",
+            "scores": {
+              "rrf": 0.0305,
+              "keyword_bm25": 0.465,
+              "vector_cosine": 0.722
+            }
+          }
+        ],
+        "commit": "753f69110f79aaaefe3308f8fb4f8954f39b3540"
+      },
+      "passed": true,
+      "problems": []
+    }
+  ]
+}
