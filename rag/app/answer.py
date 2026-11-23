@@ -26,7 +26,8 @@ Rules:
 4. Evidence marked "author knowledge" comes from the app author's own notes: say so (e.g. "according to the author's notes").
 5. Evidence marked "unknown" means the data is missing: say it is unknown. Never turn a missing count into zero.
 6. If evidence items disagree, say they disagree and cite both.
-7. Answer in at most 120 words. Do not invent card text, decklists or placements."""
+7. Answer in at most 120 words. Do not invent card text, decklists or placements.
+8. This app stores no player names. If the question asks who won or who played and the evidence gives the deck or archetype but no player name, answer with the deck or archetype and say that player names are not stored. This counts as answering, not as missing evidence."""
 
 
 @dataclass
